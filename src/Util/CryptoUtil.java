@@ -11,7 +11,7 @@ public class CryptoUtil {
     private static final String ALGO = "AES";
     private static final byte[] keyValue = new byte[]{'F', 'C', 'T', '/', 'U', 'N', 'L', 'r',
             'o', 'c', 'k', 's', '!', '!', 'd', 'i'};
-    Key key = new SecretKeySpec(keyValue, ALGO);
+    static Key key = new SecretKeySpec(keyValue, ALGO);
 
     /**
      * Encrypts a String value
