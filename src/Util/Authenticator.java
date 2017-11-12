@@ -23,6 +23,7 @@ public class Authenticator extends HttpServlet{
 	
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException ,IOException {
 		if(req.getParameter("loginButton") != null) {
+			resp.setContentType("text/html");
 			PrintWriter out = resp.getWriter();
 			try {
 				String name = req.getParameter("name");
@@ -30,13 +31,19 @@ public class Authenticator extends HttpServlet{
 				HttpSession session = req.getSession(true);
 				Account authUser = login(name, password);
 				//TODO session.setAttribute(JWT, authUser.getJWT());
-				resp.sendRedirect("MainMenu");
+				//TODO Page MainMenu does not exist yet resp.sendRedirect("MainMenu");
 			} catch (AuthenticationErrorException e) {
 				out.println("Authentication error!");
+				out.println("<br>");
+				out.println("<a href='MainPage'>MainPage</a>");
 			} catch (LockedAccountException e) {
 				out.println("Account is locked!");
+				out.println("<br>");
+				out.println("<a href='MainPage'>MainPage</a>");
 			} catch (UndefinedAccountException e) {
 				out.println("Account not found!!");
+				out.println("<br>");
+				out.println("<a href='MainPage'>MainPage</a>");
 			}
 		}
 	};
