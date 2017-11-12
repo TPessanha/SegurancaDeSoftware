@@ -1,6 +1,7 @@
 package Util;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,7 +15,6 @@ import Resources.AccountsBook;
 public class Authenticator extends HttpServlet{
 	
 	private AccountsBook accountsBook = new AccountsBook();
-	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -23,6 +23,7 @@ public class Authenticator extends HttpServlet{
 	
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException ,IOException {
 		if(req.getParameter("loginButton") != null) {
+			PrintWriter out = resp.getWriter();
 			try {
 				String name = req.getParameter("name");
 				String password = req.getParameter("password");
@@ -31,11 +32,11 @@ public class Authenticator extends HttpServlet{
 				//TODO session.setAttribute(JWT, authUser.getJWT());
 				resp.sendRedirect("MainMenu");
 			} catch (AuthenticationErrorException e) {
-				resp.sendRedirect("MainPage");
+				out.println("Authentication error!");
 			} catch (LockedAccountException e) {
-				resp.sendRedirect("MainPage");
+				out.println("Account is locked!");
 			} catch (UndefinedAccountException e) {
-				resp.sendRedirect("MainPage");
+				out.println("Account not found!!");
 			}
 		}
 	};
