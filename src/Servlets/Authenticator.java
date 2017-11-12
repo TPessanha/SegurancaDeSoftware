@@ -65,7 +65,7 @@ public class Authenticator extends HttpServlet{
 	 */
 	private void create_account(String name, String pwd1, String pwd2) {
 		if(pwd1.equals(pwd2))
-			new Account(name, pwd1);
+			accountsBook.addAccount(new Account(name, pwd1));
 	}
 
 	/**
@@ -75,6 +75,7 @@ public class Authenticator extends HttpServlet{
 	 * @param name account name.
 	 */
 	private void delete_account(String name) {
+		accountsBook.deleteAccount(name);
 	}
 
 	/**
