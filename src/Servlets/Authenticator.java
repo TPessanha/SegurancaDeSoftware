@@ -22,16 +22,26 @@ public class Authenticator extends HttpServlet{
 	}
 	
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException ,IOException {
+		PrintWriter out = resp.getWriter();
+		Account root = new Account("root", "root");
+		accountsBook.addAccount(root);
+		out.print("Root username = " + root.getUsername() + " " + "Password = " + root.getPassword());
+		out.println("<br><br>");
 		if(req.getParameter("loginButton") != null) {
 			resp.setContentType("text/html");
-			PrintWriter out = resp.getWriter();
 			try {
+				out.println("Entered try block <br>");
 				String name = req.getParameter("name");
+				out.println("Got name " + name + " <br>");
 				String password = req.getParameter("password");
+				out.println("Got password " + password + " <br>");
 				HttpSession session = req.getSession(true);
-				Account authUser = login(name, password);
+				out.println("Got session <br>");
+				Account authUser = login(name, password, out);
+				out.println("Logged in <br>");
 				//TODO session.setAttribute(JWT, authUser.getJWT());
-				//TODO Page MainMenu does not exist yet resp.sendRedirect("MainMenu");
+				//TODO Page MainMenu does not exist yet 
+				resp.sendRedirect("MainPage");
 			} catch (AuthenticationErrorException e) {
 				out.println("Authentication error!");
 				out.println("<br>");
@@ -92,18 +102,25 @@ public class Authenticator extends HttpServlet{
 	}
 
 
-	private Account login(String name, String pwd) throws UndefinedAccountException, LockedAccountException, AuthenticationErrorException {
+	private Account login(String name, String pwd, PrintWriter out) throws UndefinedAccountException, LockedAccountException, AuthenticationErrorException {
 		Account account = accountsBook.getAccount(name);
-		if(account == null)
+		out.print("<br> Acount = " + account.getUsername() + " + trying " + name + "<br>");
+		out.println("<br> does userName exist?");
+		if(account.getUsername().equals(""))
 			throw new UndefinedAccountException();
+		out.println("<br> yes.");
 		//TODO boolean isLocked = account.isLocked();
 		boolean isLocked = false;
+		out.println("<br> is userName Locked?");
 		if(isLocked)
 			throw new LockedAccountException();
+		out.println("<br> no.");
 		//TODO check how to hash password
-		if(!account.getPassword().equals(pwd.hashCode()))
+		out.println("<br> is password correct?");
+		if(account.checkPassword(pwd))
 			throw new AuthenticationErrorException();
-		//TODO Set locked with: account.setLocked()
+		out.println("<br> yes.");
+		//TODO Set logged with: account.setLoggedIn()
 		System.out.println("login finish.");
 		return account;
 	}
@@ -116,12 +133,12 @@ public class Authenticator extends HttpServlet{
 		System.out.println("logout finish.");
 	}
 	/**
-	 * 
+	 * Authenticate the caller in every servlet interaction, supposed to be logged in already!
 	 * @param req
 	 * @param res
 	 * @return
 	 */
-	private Account login(HttpServletRequest req, HttpServletResponse res) {
+	private Account login(HttpServletRequest req, HttpServletResponse res) throws AuthenticationErrorException {
 		System.out.println("login finish.");
 		return null;
 	}
