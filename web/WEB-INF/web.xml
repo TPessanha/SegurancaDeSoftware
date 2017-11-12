@@ -14,7 +14,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>MainPage</servlet-name>
-        <servlet-class>Util.MainPage</servlet-class>
+        <servlet-class>Servlets.MainPage</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>MainPage</servlet-name>
@@ -22,7 +22,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>Authenticator</servlet-name>
-        <servlet-class>Util.Authenticator</servlet-class>
+        <servlet-class>Servlets.Authenticator</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Authenticator</servlet-name>
