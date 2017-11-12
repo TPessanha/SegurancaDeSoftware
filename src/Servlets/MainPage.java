@@ -22,8 +22,14 @@ public class MainPage extends HttpServlet{
 
 		//Login
 		out.print("<form action=\"");
-		out.print("HelloServlet\" ");
+		out.print("Authenticator\" ");
 		out.println("method=POST>");
+		out.println("Name: ");
+		out.println("<input type=text size=20 name=name>");
+		out.println("<br>");
+		out.println("Password: ");
+		out.println("<input type=text size=20 name=password>");
+		out.println("<br>");
 		out.println("<input type=submit name=loginButton value='Login'>");
 		out.println("</form>");
 
