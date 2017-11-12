@@ -40,8 +40,7 @@ public class Authenticator extends HttpServlet{
 				Account authUser = login(name, password, out);
 				out.println("Logged in <br>");
 				//TODO session.setAttribute(JWT, authUser.getJWT());
-				//TODO Page MainMenu does not exist yet 
-				resp.sendRedirect("MainPage");
+				//TODO Page MainMenu does not exist yet resp.sendRedirect("MainPage");
 			} catch (AuthenticationErrorException e) {
 				out.println("Authentication error!");
 				out.println("<br>");
@@ -65,10 +64,8 @@ public class Authenticator extends HttpServlet{
 	 * @param pwd2 second password input.
 	 */
 	private void create_account(String name, String pwd1, String pwd2) {
-		if(pwd1.equals(pwd2)) {
+		if(pwd1.equals(pwd2))
 			new Account(name, pwd1);
-			System.out.println("create_account finish.");
-		}
 	}
 
 	/**
@@ -78,7 +75,6 @@ public class Authenticator extends HttpServlet{
 	 * @param name account name.
 	 */
 	private void delete_account(String name) {
-		System.out.println("delete_account finish.");
 	}
 
 	/**
@@ -87,7 +83,6 @@ public class Authenticator extends HttpServlet{
 	 * @return readonly clone of Account.
 	 */
 	private Account get_account(String name) {
-		System.out.println("get_account finish.");
 		return null;
 	}
 
@@ -98,7 +93,6 @@ public class Authenticator extends HttpServlet{
 	 * @param pwd2 second password input.
 	 */
 	private void change_pwd(String name, String pwd1, String pwd2) {
-		System.out.println("change_pwd finish.");
 	}
 
 
@@ -117,11 +111,14 @@ public class Authenticator extends HttpServlet{
 		out.println("<br> no.");
 		//TODO check how to hash password
 		out.println("<br> is password correct?");
-		if(account.checkPassword(pwd))
+		if(!account.checkPassword(pwd)) {
+			out.println("<br> Saved account: " + account.getPassword());
+			out.println("<br> Logged Aaccount: " + pwd);
+			out.println("<br> Pw compare result: " + account.checkPassword(pwd));
 			throw new AuthenticationErrorException();
+		}
 		out.println("<br> yes.");
 		//TODO Set logged with: account.setLoggedIn()
-		System.out.println("login finish.");
 		return account;
 	}
 
@@ -130,7 +127,6 @@ public class Authenticator extends HttpServlet{
 	 * @param acc
 	 */
 	private void logout(Account acc) {
-		System.out.println("logout finish.");
 	}
 	/**
 	 * Authenticate the caller in every servlet interaction, supposed to be logged in already!
@@ -139,7 +135,6 @@ public class Authenticator extends HttpServlet{
 	 * @return
 	 */
 	private Account login(HttpServletRequest req, HttpServletResponse res) throws AuthenticationErrorException {
-		System.out.println("login finish.");
 		return null;
 	}
 }
