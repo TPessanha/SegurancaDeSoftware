@@ -14,7 +14,7 @@ import Resources.AccountsBook;
 
 public class Authenticator extends HttpServlet{
 	
-	private AccountsBook accountsBook = new AccountsBook();
+	AccountsBook accountsBook = new AccountsBook();
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
