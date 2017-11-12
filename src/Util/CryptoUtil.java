@@ -20,7 +20,7 @@ public class CryptoUtil {
      * @return A String encrypted
      * @throws Exception
      */
-    public String encrypt(String Data) throws Exception {
+    public static String encrypt(String Data) throws Exception {
         Cipher c = Cipher.getInstance(ALGO);
         c.init(Cipher.ENCRYPT_MODE, key);
         byte[] encVal = c.doFinal(Data.getBytes());
@@ -35,7 +35,7 @@ public class CryptoUtil {
      * @return Decrypted String
      * @throws Exception
      */
-    public String decrypt(String encrypted) throws Exception {
+    public static String decrypt(String encrypted) throws Exception {
         Cipher c = Cipher.getInstance(ALGO);
         c.init(Cipher.DECRYPT_MODE, key);
         byte[] decodedValue = java.util.Base64.
