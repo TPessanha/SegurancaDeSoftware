@@ -2,9 +2,10 @@ package Resources;
 
 
 import java.io.*;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
-import static Util.Constants.FILE_NAME;
+import static Util.Constants.DATABASE_FILE_PATH;
 
 /**
  * Created by tomas on 11/11/2017.
@@ -13,18 +14,18 @@ public class Storage {
 
 
     /**
-     * @return
+     * @return A list of all the accounts
      */
     public static ArrayList<Account> getAllAccounts() {
         Account acc;
-        ArrayList<Account> list = new ArrayList<Account>();
+        ArrayList<Account> list = new ArrayList<>();
         FileReader fr;
         BufferedReader br;
 
         try {
-            fr = new FileReader(FILE_NAME);
+            fr = new FileReader(DATABASE_FILE_PATH);
             br = new BufferedReader(fr);
-            String line = null;
+            String line;
             while ((line = br.readLine()) != null) {
                 list.add(new Account(line.substring(0,
                         line.indexOf(";")), line.substring(line.indexOf(";"), line.length()
@@ -38,15 +39,14 @@ public class Storage {
     }
 
     /**
-     *
-     * @param acc
+     * @param acc The account to add to persistent storage
      */
     public static void addAccountToStorage(Account acc) {
         FileWriter fw;
         PrintWriter pw;
 
         try {
-            fw = new FileWriter(FILE_NAME);
+            fw = new FileWriter(DATABASE_FILE_PATH);
             pw = new PrintWriter(fw);
 
             pw.append(acc.getUsername() + ";" + acc.getPassword());
@@ -57,19 +57,22 @@ public class Storage {
     }
 
     /**
-     * @param book
+     * Saves all the accounts in persistant storage but deletes the previous ones
+     *
+     * @param book The book containing all the accounts to save
      */
-    public static void saveAccountBookToStorage(AccountsBook book) {
+    public static void SaveChangesToStorage(AccountsBook book) {
         FileWriter fw;
         PrintWriter pw;
 
         try {
-            fw = new FileWriter(FILE_NAME);
+
+            fw = new FileWriter(Paths.get("") + DATABASE_FILE_PATH);
             pw = new PrintWriter(fw);
 
             pw.write("");
-            for (Account acc : book) {
-                pw.append(acc.getUsername() + ";" + acc.getPassword());
+            for (Account acc : book.getAllAccounts()) {
+                pw.append(acc.getUsername()).append(";").append(acc.getPassword());
             }
 
             pw.close();

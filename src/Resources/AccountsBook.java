@@ -8,9 +8,10 @@ import java.util.List;
  */
 public class AccountsBook {
 
-    List<Account> book = new ArrayList<Account>();
+    private List<Account> book;
 
     public AccountsBook() {
+        book = new ArrayList<Account>();
     }
 
     public void loadAccounts() {
@@ -23,5 +24,26 @@ public class AccountsBook {
                 return acc;
         }
         return null;
+    }
+
+    public void addAccount(Account acc) {
+        book.add(acc);
+    }
+
+    public void deleteAccount(String username) {
+        int i = 0;
+
+        for (Account acc : book) {
+            if (acc.getUsername().equals(username)) {
+                book.remove(i);
+                return;
+            }
+            i++;
+        }
+        return;
+    }
+
+    public List<Account> getAllAccounts() {
+        return book;
     }
 }
