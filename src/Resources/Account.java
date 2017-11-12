@@ -9,6 +9,7 @@ public class Account {
     private boolean loggedIn;
     private boolean locked;
     private role role;
+
     public Account(String username, String password) {
         this.username = username;
         this.password = password;
