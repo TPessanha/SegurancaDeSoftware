@@ -12,4 +12,12 @@
         <servlet-name>FirstServlet</servlet-name>
         <url-pattern></url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>MainPage</servlet-name>
+        <servlet-class>Util.MainPage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MainPage</servlet-name>
+        <url-pattern>/MainPage</url-pattern>
+    </servlet-mapping>
 </web-app>
