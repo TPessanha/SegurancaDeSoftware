@@ -20,4 +20,12 @@
         <servlet-name>MainPage</servlet-name>
         <url-pattern>/MainPage</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>Authenticator</servlet-name>
+        <servlet-class>Util.Authenticator</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Authenticator</servlet-name>
+        <url-pattern>/Authenticator</url-pattern>
+    </servlet-mapping>
 </web-app>
