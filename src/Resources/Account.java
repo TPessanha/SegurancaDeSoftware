@@ -32,13 +32,17 @@ public class Account {
         this.locked = true;
         this.role = Role.USER;
         this.locked = false;
-        this.role = role.USER;
     }
 
     public Account(String username, String password, String salt, String role, String locked, String loggedIn) {
         this.username = username;
         this.salt = salt;
-        this.password = password;
+        try {
+            this.password = CryptoUtil.encrypt(password + salt);
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+            return;
+        }
         this.loggedIn = loggedIn.equals("true");
         this.locked = locked.equals("true");
         this.role = Role.fromValue(role);
@@ -107,7 +111,6 @@ public class Account {
     }
 
     public void setPassword(String password) {
-
         this.salt = generateSalt();
         try {
 

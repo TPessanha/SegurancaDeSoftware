@@ -19,35 +19,6 @@ import static Util.Constants.DATABASE_FILE_PATH;
 public class Storage {
     private static final Logger LOG = Logger.getLogger(Storage.class.getName());
 
-    /**
-     * @return A list of all the accounts
-     */
-    public static ArrayList<Account> getAllAccounts() {
-        Account acc;
-        ArrayList<Account> list = new ArrayList<>();
-        FileReader fr;
-        BufferedReader br;
-
-        try {
-            fr = new FileReader(DATABASE_FILE_PATH);
-            br = new BufferedReader(fr);
-            String line;
-            while ((line = br.readLine()) != null) {
-                list.add(new Account(line,
-                        br.readLine(),
-                        br.readLine(),
-                        br.readLine(),
-                        br.readLine(),
-                        br.readLine()
-                ));
-            }
-            return list;
-        } catch (IOException e) {
-            System.err.format("IOException: %s%n", e);
-            return null;
-        }
-    }
-
     public static boolean checkUser(String user) {
         if (getAccount(user) == null)
             return false;
@@ -120,8 +91,26 @@ public class Storage {
 
     }
 
-    public static void updateAccount() {
+    public static void updateAccount(Account acc) {
+        String sql = "UPDATE Accounts SET Password = ?, Role = ?,Salt = ?,LoggedIn = ?,Locked = ? WHERE Username = ?";
+        try (Connection conn = dbConnection.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
 
+            // set the corresponding param
+            ps.setString(1, acc.getPassword());
+            ps.setString(2, acc.getRole().toString());
+            ps.setString(3, acc.getSalt());
+            ps.setBoolean(4, acc.isLoggedIn());
+            ps.setBoolean(5, acc.isLocked());
+            ps.setString(6, acc.getUsername());
+            // execute the update statement
+            int i = ps.executeUpdate();
+            ps.executeUpdate();
+            ps.close();
+
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
     }
 
     public static void removeAccount(String user) {
@@ -134,6 +123,7 @@ public class Storage {
             ps.setString(1, user);
             // execute the delete statement
             ps.executeUpdate();
+            ps.close();
 
         } catch (SQLException e) {
             System.err.println(e.getMessage());

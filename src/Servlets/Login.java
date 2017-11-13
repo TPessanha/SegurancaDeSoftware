@@ -32,6 +32,10 @@ public class Login extends HttpServlet {
             HttpSession session = request.getSession(true);
             session.setAttribute("USER", acc.getUsername());
             session.setAttribute("PASS", acc.getPassword());
+            session.setAttribute("SALT", acc.getSalt());
+            session.setAttribute("ROLE", acc.getRole().toString());
+            session.setAttribute("LOGGED_IN", String.valueOf(acc.isLoggedIn()));
+            session.setAttribute("LOCKED", String.valueOf(acc.isLocked()));
 
             //Login
             out.println("<h1>Welcome " + acc.getUsername() + "</h1>");
@@ -44,5 +48,10 @@ public class Login extends HttpServlet {
             rs.include(request, response);
         }
 
+    }
+
+    public void destroy() {
+        // release resources here
+        super.destroy();
     }
 }
