@@ -23,7 +23,7 @@ public class Authenticator {
     }
 
 
-    static void change_pwd(String name, String pwd1, String pwd2) throws UndefinedAccount, PasswordMismatch {
+    public static void change_pwd(String name, String pwd1, String pwd2) throws UndefinedAccount, PasswordMismatch {
         if (!pwd1.equals(pwd2))
             throw new PasswordMismatch("The passwords do not match");
         Account acc = Storage.getAccount(name);
@@ -56,7 +56,7 @@ public class Authenticator {
         }
     }
 
-    static void logout(Account acc) throws UndefinedAccount {
+    public static void logout(Account acc) throws UndefinedAccount {
         Account acc = Storage.getAccount(name);
         if (acc == null)
             throw new UndefinedAccount("No account was found");
@@ -71,7 +71,7 @@ public class Authenticator {
         return acc;
     }
 
-    static Account login(HttpServletRequest req, HttpServletResponse resp) throws AuthenticationError {
+    public static Account login(HttpServletRequest req, HttpServletResponse resp) throws AuthenticationError {
         Account acc;
         try {
             acc = new Account(
