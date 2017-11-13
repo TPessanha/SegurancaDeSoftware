@@ -22,6 +22,7 @@ public class Authenticator {
         Storage.removeAccount(name);
     }
 
+
     static void change_pwd(String name, String pwd1, String pwd2) throws UndefinedAccount, PasswordMismatch {
         if (!pwd1.equals(pwd2))
             throw new PasswordMismatch("The passwords do not match");
