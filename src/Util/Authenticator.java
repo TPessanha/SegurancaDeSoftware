@@ -1,5 +1,6 @@
 package Util;
 
+import Exceptions.*;
 import Resources.Account;
 
 import javax.servlet.http.HttpServletRequest;
@@ -7,12 +8,14 @@ import javax.servlet.http.HttpServletResponse;
 
 
 public class Authenticator {
-    static void create_account(String name, String pwd1, String pwd2) {
+    public static void create_account(String name, String pwd1, String pwd2) throws PasswordMismatch, UsernameInUse {
         if (!pwd1.equals(pwd2))
-            return;
+            throw new PasswordMismatch("The passwords do not match");
         if (Storage.getAccount(name) != null)
-            return;
+            throw new UsernameInUse("The username is already in use");
 
+        Account acc = new Account(name, pwd1);
+        Storage.addAccount(acc);
     }
 
     static void delete_account(String name) {
@@ -23,19 +26,26 @@ public class Authenticator {
         return;
     }
 
-    static Account login(String name, String pwd) {
+    public static Account login(String name, String pwd) throws UndefinedAccount, LockedAccount, AuthenticationError {
         Account acc = Storage.getAccount(name);
-        if (acc != null) {
-            try {
-                if (acc.getPassword().equals(CryptoUtil.encrypt(pwd + acc.getSalt()))) {
-                    acc.setLoggedIn(true);
-                    return acc;
-                }
-            } catch (Exception e) {
-                System.err.println(e.getMessage());
-            }
+        if (acc == null)
+            throw new UndefinedAccount("No account was found");
+
+        String saltedpwd = null;
+        try {
+            saltedpwd = CryptoUtil.encrypt(pwd + acc.getSalt());
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
         }
-        return null;
+
+        if (acc.getPassword().equals(saltedpwd)) {
+            if (acc.isLocked())
+                throw new LockedAccount("This account is locked");
+            acc.setLoggedIn(true);
+            return acc;
+        } else {
+            throw new AuthenticationError("The password is invalid");
+        }
     }
 
     static void logout(Account acc) {

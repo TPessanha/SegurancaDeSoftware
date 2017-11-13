@@ -120,6 +120,10 @@ public class Storage {
 
     }
 
+    public static void updateAccount() {
+
+    }
+
     public static void removeAccount(String user) {
         String sql = "DELETE FROM Accounts WHERE Username = ?";
 
