@@ -33,6 +33,11 @@ public class Logout extends HttpServlet{
         	HttpSession session = request.getSession(false);
         	session.setAttribute("USER", null);
         	session.setAttribute("PASS", null);
+            session.setAttribute("SALT", null);
+            session.setAttribute("ROLE", null);
+            session.setAttribute("LOGGED_IN", null);
+            session.setAttribute("LOCKED", null);
+        	session.invalidate();
         	
             RequestDispatcher rs = request.getRequestDispatcher("login.html");
             rs.forward(request, response);
