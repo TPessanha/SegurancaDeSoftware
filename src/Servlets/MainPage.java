@@ -15,19 +15,26 @@ public class MainPage extends HttpServlet{
 		res.setContentType("text/html");
 
 		PrintWriter out = res.getWriter();
-
-		out.println("<h1><center>Main Page</center></h1>");
+		out.println("<center>");
+		out.println("<h1>Main Page</h1>");
 		out.println("<br>");
 		out.println("<br>");
 
 		//Login
 		out.print("<form action=\"");
-		out.print("HelloServlet\" ");
+		out.print("Authenticator\" ");
 		out.println("method=POST>");
+		out.println("Name: <br>");
+		out.println("<input type=text size=20 name=name>");
+		out.println("<br>");
+		out.println("Password: <br>");
+		out.println("<input type=text size=20 name=password>");
+		out.println("<br>");
 		out.println("<input type=submit name=loginButton value='Login'>");
 		out.println("</form>");
 
 		//Finishing HTML page and closing writer
+		out.println("</center>");
 		out.println("</body>");
 		out.println("</html>");
 		out.close();

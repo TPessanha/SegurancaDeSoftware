@@ -28,12 +28,13 @@
 
     <servlet>
         <servlet-name>MainPage</servlet-name>
-        <servlet-class>Util.MainPage</servlet-class>
+        <servlet-class>Servlets.MainPage</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>MainPage</servlet-name>
         <url-pattern>/MainPage</url-pattern>
     </servlet-mapping>
+<<<<<<< HEAD
 
     <servlet>
         <servlet-name>login</servlet-name>
@@ -41,4 +42,54 @@
     </servlet>
 
 
+=======
+    <servlet>
+        <servlet-name>Authenticator</servlet-name>
+        <servlet-class>Servlets.Authenticator</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Authenticator</servlet-name>
+        <url-pattern>/Authenticator</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>MainMenu</servlet-name>
+        <servlet-class>Servlets.MainMenu</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MainMenu</servlet-name>
+        <url-pattern>/MainMenu</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CreateAccount</servlet-name>
+        <servlet-class>Servlets.CreateAccount</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateAccount</servlet-name>
+        <url-pattern>/CreateAccount</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteAccount</servlet-name>
+        <servlet-class>Servlets.DeleteAccount</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteAccount</servlet-name>
+        <url-pattern>/DeleteAccount</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ChangePassword</servlet-name>
+        <servlet-class>Servlets.ChangePassword</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChangePassword</servlet-name>
+        <url-pattern>/ChangePassword</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>Servlets.Logout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+>>>>>>> refs/remotes/origin/master
 </web-app>

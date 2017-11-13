@@ -48,12 +48,16 @@ public class Account {
 
         this.role = Role.fromValue(role);
     }
+<<<<<<< HEAD
 
     /**
      * Checks if an account is logged in
      *
      * @return TRUE if logged in FALSE otherwise
      */
+=======
+  
+>>>>>>> refs/remotes/origin/master
     public boolean isLoggedIn() {
         return loggedIn;
     }
