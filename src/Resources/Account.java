@@ -19,7 +19,7 @@ public class Account {
         this.locked = true;
         this.role = role.USER;
     }
-
+  
     public boolean isLoggedIn() {
         return loggedIn;
     }
