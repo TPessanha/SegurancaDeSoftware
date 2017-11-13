@@ -34,15 +34,12 @@
         <servlet-name>MainPage</servlet-name>
         <url-pattern>/MainPage</url-pattern>
     </servlet-mapping>
-<<<<<<< HEAD
 
     <servlet>
         <servlet-name>login</servlet-name>
         <servlet-class>Login</servlet-class>
     </servlet>
 
-
-=======
     <servlet>
         <servlet-name>Authenticator</servlet-name>
         <servlet-class>Servlets.Authenticator</servlet-class>
@@ -91,5 +88,5 @@
         <servlet-name>Logout</servlet-name>
         <url-pattern>/Logout</url-pattern>
     </servlet-mapping>
->>>>>>> refs/remotes/origin/master
+    >>>>>>> refs/remotes/origin/master
 </web-app>

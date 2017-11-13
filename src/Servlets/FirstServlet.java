@@ -30,6 +30,13 @@ public class FirstServlet extends HttpServlet {
         //CODE
         Account acc = new Account("test", "test");
         Storage.addAccount(acc);
+        Account acc2 = Storage.getAccount("test");
+        out.println("<h3>"+acc.getUsername()+"</h3>");
+        out.println("<h3>"+acc.getPassword()+"</h3>");
+        out.println("<h3>"+acc.getSalt()+"</h3>");
+        out.println("<h3>"+acc.getRole().toString()+"</h3>");
+        out.println("<h3>"+acc.isLoggedIn()+"</h3>");
+        out.println("<h3>"+acc.isLocked()+"</h3>");
 
         //HTML
         out.println("</body>");
