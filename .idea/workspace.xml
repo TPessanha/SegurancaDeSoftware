@@ -2,59 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb658dd2-edc6-409d-831c-486bcc615e72" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Exceptions/PasswordMismatch.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Exceptions/UsernameInUse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Servlets/Register.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/Utils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/register.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Resources/AccountsBook.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Servlets/AuthenticationErrorException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Servlets/Authenticator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Servlets/LockedAccountException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Servlets/UndefinedAccountException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Seguranca/Resources/AccountsBook.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Seguranca/Servlets/AuthenticationErrorException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Seguranca/Servlets/Authenticator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Seguranca/Servlets/LockedAccountException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Seguranca/Servlets/UndefinedAccountException.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e8684959-dae7-499b-a9ec-e4c97ba882b6/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/e8684959-dae7-499b-a9ec-e4c97ba882b6/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e8684959-dae7-499b-a9ec-e4c97ba882b6/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/e8684959-dae7-499b-a9ec-e4c97ba882b6/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Database.db" afterPath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Database.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Resources/Account.class" afterPath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Resources/Account.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Servlets/ChangePassword.class" afterPath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Servlets/ChangePassword.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Servlets/CreateAccount.class" afterPath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Servlets/CreateAccount.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Servlets/DeleteAccount.class" afterPath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Servlets/DeleteAccount.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Servlets/Login.class" afterPath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Servlets/Login.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Servlets/Logout.class" afterPath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Servlets/Logout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Servlets/MainMenu.class" afterPath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Servlets/MainMenu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Util/Authenticator.class" afterPath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Util/Authenticator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Util/Storage.class" afterPath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Util/Storage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Seguranca/Database.db" afterPath="$PROJECT_DIR$/out/production/Seguranca/Database.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Seguranca/Resources/Account.class" afterPath="$PROJECT_DIR$/out/production/Seguranca/Resources/Account.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Seguranca/Servlets/ChangePassword.class" afterPath="$PROJECT_DIR$/out/production/Seguranca/Servlets/ChangePassword.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Seguranca/Servlets/CreateAccount.class" afterPath="$PROJECT_DIR$/out/production/Seguranca/Servlets/CreateAccount.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Seguranca/Servlets/DeleteAccount.class" afterPath="$PROJECT_DIR$/out/production/Seguranca/Servlets/DeleteAccount.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Seguranca/Servlets/Login.class" afterPath="$PROJECT_DIR$/out/production/Seguranca/Servlets/Login.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Seguranca/Servlets/Logout.class" afterPath="$PROJECT_DIR$/out/production/Seguranca/Servlets/Logout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Seguranca/Servlets/MainMenu.class" afterPath="$PROJECT_DIR$/out/production/Seguranca/Servlets/MainMenu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Seguranca/Util/Authenticator.class" afterPath="$PROJECT_DIR$/out/production/Seguranca/Util/Authenticator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Seguranca/Util/Storage.class" afterPath="$PROJECT_DIR$/out/production/Seguranca/Util/Storage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Database.db" afterPath="$PROJECT_DIR$/src/Database.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/welcome.jsp" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/login.html" afterPath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Resources/Account.java" afterPath="$PROJECT_DIR$/src/Resources/Account.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Servlets/FirstServlet.java" afterPath="$PROJECT_DIR$/src/Servlets/FirstServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Servlets/Login.java" afterPath="$PROJECT_DIR$/src/Servlets/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Util/Authenticator.java" afterPath="$PROJECT_DIR$/src/Util/Authenticator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Util/Storage.java" afterPath="$PROJECT_DIR$/src/Util/Storage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/login.html" afterPath="$PROJECT_DIR$/web/login.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -178,21 +127,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Login.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Servlets/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="37" column="77" lean-forward="false" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="77" />
+            <state relative-caret-position="310">
+              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="welcome.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/welcome.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="204">
+              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -1099,7 +1048,7 @@
       <workItem from="1510542748961" duration="87000" />
       <workItem from="1510543124912" duration="5000" />
       <workItem from="1510543148717" duration="5846000" />
-      <workItem from="1510582793359" duration="10512000" />
+      <workItem from="1510582793359" duration="11504000" />
     </task>
     <task id="LOCAL-00001" summary="Commit src">
       <created>1510509785579</created>
@@ -1133,7 +1082,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55578000" />
+    <option name="totallyTimeSpent" value="56570000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1150,7 +1099,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5127932" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33152762" sideWeight="0.5575693" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1168,11 +1117,11 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.4936034" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.4914712" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33152762" sideWeight="0.4445629" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33152762" sideWeight="0.4424307" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16311301" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.48720682" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.48720682" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1636,18 +1585,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servlets/Login.java">
+    <entry file="file://$PROJECT_DIR$/web/welcome.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="37" column="77" lean-forward="false" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="77" />
+        <state relative-caret-position="204">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/welcome.html">
+    <entry file="file://$PROJECT_DIR$/src/Servlets/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="310">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>
