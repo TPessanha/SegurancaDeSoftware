@@ -8,7 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 
 public class Authenticator {
 
-    void create_account(String name, String pwd1, String pwd2) {
+
+    static void create_account(String name, String pwd1, String pwd2) {
         if (!pwd1.equals(pwd2))
             return;
         if (Storage.getAccount(name) != null)
@@ -16,20 +17,15 @@ public class Authenticator {
 
     }
 
-    void delete_account(String name) {
+    static void delete_account(String name) {
         return;
     }
 
-
-    Account get_account(String name) {
-        return null;
-    }
-
-    void change_pwd(String name, String pwd1, String pwd2) {
+    static void change_pwd(String name, String pwd1, String pwd2) {
         return;
     }
 
-    Account login(String name, String pwd) {
+    static Account login(String name, String pwd) {
         Account acc = Storage.getAccount(name);
         if (acc != null) {
             try {
@@ -44,11 +40,15 @@ public class Authenticator {
         return null;
     }
 
-    void logout(Account acc) {
+    static void logout(Account acc) {
         return;
     }
+    
+    static Account get_account(String name) {
+        return null;
+    }
 
-    Account login(HttpServletRequest req, HttpServletResponse resp) {
+    static Account login(HttpServletRequest req, HttpServletResponse resp) {
         return null;
     }
 }
