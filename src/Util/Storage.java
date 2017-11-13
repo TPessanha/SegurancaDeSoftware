@@ -2,11 +2,9 @@ package Util;
 
 
 import Resources.Account;
-import Resources.AccountsBook;
 import Util.dbUtil.dbConnection;
 
 import java.io.*;
-import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -119,33 +117,4 @@ public class Storage {
 
     }
 
-    /**
-     * Saves all the accounts in persistant storage but deletes the previous ones
-     *
-     * @param book The book containing all the accounts to save
-     */
-    public static void SaveChangesToStorage(AccountsBook book) {
-        FileWriter fw;
-        PrintWriter pw;
-
-        try {
-
-            fw = new FileWriter(Paths.get("") + DATABASE_FILE_PATH);
-            pw = new PrintWriter(fw);
-
-            pw.write("");
-            for (Account acc : book.getAllAccounts()) {
-                pw.append(acc.getUsername()).append("\r\n")
-                        .append(acc.getPassword()).append("\r\n")
-                        .append(acc.getSalt()).append("\r\n")
-                        .append(acc.getRole().toString()).append("\r\n")
-                        .append(String.valueOf(acc.isLocked())).append("\r\n")
-                        .append(String.valueOf(acc.isLoggedIn())).append("\r\n");
-            }
-
-            pw.close();
-        } catch (IOException e) {
-            System.err.format("IOException: %s%n", e);
-        }
-    }
 }

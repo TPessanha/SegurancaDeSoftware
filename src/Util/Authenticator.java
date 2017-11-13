@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 
 public class Authenticator {
 
-
     void create_account(String name, String pwd1, String pwd2) {
         if (!pwd1.equals(pwd2))
             return;

@@ -10,11 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import Resources.Account;
-import Resources.AccountsBook;
 
 public class Authenticator extends HttpServlet{
 
-	AccountsBook accountsBook = new AccountsBook();
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -98,7 +97,7 @@ public class Authenticator extends HttpServlet{
 		out.println("</body>");
 		out.println("</html>");
 		out.close();
-	};
+	}
 
 	/**
 	 * Creates a new Account. PWD1 must be the same as PWD2.
