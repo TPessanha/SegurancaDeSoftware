@@ -48,7 +48,7 @@ public class Authenticator {
         }
     }
 
-    static void logout(Account acc) {
+    public static void logout(Account acc) {
         return;
     }
 
@@ -56,7 +56,7 @@ public class Authenticator {
         return null;
     }
 
-    static Account login(HttpServletRequest req, HttpServletResponse resp) {
+    public static Account login(HttpServletRequest req, HttpServletResponse resp) {
         return null;
     }
 }
