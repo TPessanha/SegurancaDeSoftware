@@ -17,7 +17,7 @@ public class Account {
         this.role = role.USER;
     }
 
-    String getUsername() {
+    public String getUsername() {
         return username;
     }
 
@@ -29,7 +29,7 @@ public class Account {
         this.password = password;
     }
 
-    boolean checkPassword(String pwd) {
+    public boolean checkPassword(String pwd) {
         //TODO: finish this with encrypt
         return password.equals(pwd);
     }
