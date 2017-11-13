@@ -17,8 +17,7 @@ public class Authenticator extends HttpServlet{
 	AccountsBook accountsBook = new AccountsBook();
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		super.doGet(req, resp);
+
 	}
 	
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException ,IOException {
@@ -34,7 +33,6 @@ public class Authenticator extends HttpServlet{
 				HttpSession session = req.getSession(true);
 				Account authUser = login(name, password);
 				//TODO session.setAttribute(JWT, authUser.getJWT());
-				//TODO Page MainMenu does not exist yet 
 				resp.sendRedirect("MainMenu");
 			} catch (AuthenticationErrorException e) {
 				out.println("Authentication error!");
@@ -101,15 +99,13 @@ public class Authenticator extends HttpServlet{
 		Account account = accountsBook.getAccount(name);
 		if(account == null)
 			throw new UndefinedAccountException();
-		//TODO boolean isLocked = account.isLocked();
-		boolean isLocked = false;
-		if(isLocked)
+		if(account.isLocked())
 			throw new LockedAccountException();
 		//TODO check how to hash password
 		if(!account.checkPassword(pwd)) {
 			throw new AuthenticationErrorException();
 		}
-		//TODO Set logged with: account.setLoggedIn()
+		account.setLoggedIn(true);
 		return account;
 	}
 
