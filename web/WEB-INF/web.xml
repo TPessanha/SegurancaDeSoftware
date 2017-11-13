@@ -4,13 +4,26 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <session-config>
+        <cookie-config>
+            <http-only>true</http-only>
+            <secure>true</secure>
+            <max-age>7200</max-age> <!-- 60 * 60 * 2-->
+        </cookie-config>
+        <session-timeout>120</session-timeout>
+    </session-config>
+
     <servlet>
         <servlet-name>FirstServlet</servlet-name>
         <servlet-class>Servlets.FirstServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>FirstServlet</servlet-name>
-        <url-pattern></url-pattern>
+        <url-pattern>/FirstServlet</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -21,6 +34,12 @@
         <servlet-name>MainPage</servlet-name>
         <url-pattern>/MainPage</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>login</servlet-name>
+        <servlet-class>Login</servlet-class>
+    </servlet>
+
     <servlet>
         <servlet-name>Authenticator</servlet-name>
         <servlet-class>Servlets.Authenticator</servlet-class>
@@ -69,4 +88,5 @@
         <servlet-name>Logout</servlet-name>
         <url-pattern>/Logout</url-pattern>
     </servlet-mapping>
+    >>>>>>> refs/remotes/origin/master
 </web-app>

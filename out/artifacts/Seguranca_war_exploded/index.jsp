@@ -12,5 +12,6 @@
 </head>
 <body>
 Test do servlet
+<a href="FirstServlet">Execute</a>
 </body>
 </html>

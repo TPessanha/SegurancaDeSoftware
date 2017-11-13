@@ -1,11 +1,10 @@
 package Resources;
 
+import Util.Storage;
+
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by tomas on 11/11/2017.
- */
 public class AccountsBook {
 
     private List<Account> book;
@@ -40,7 +39,6 @@ public class AccountsBook {
             }
             i++;
         }
-        return;
     }
 
     public List<Account> getAllAccounts() {

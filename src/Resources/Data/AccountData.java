@@ -1,8 +1,5 @@
 package Resources.Data;
 
-/**
- * Created by tomas on 12/11/2017.
- */
 public class AccountData {
     public String username;
     public String password;

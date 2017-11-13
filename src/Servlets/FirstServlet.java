@@ -1,9 +1,8 @@
 package Servlets;
 
 import Resources.Account;
-import Resources.AccountsBook;
-import Resources.Storage;
 import Util.Constants;
+import Util.Storage;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,8 +13,7 @@ import java.io.PrintWriter;
 
 public class FirstServlet extends HttpServlet {
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws IOException, ServletException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         //Response type
         response.setContentType("text/html");
 
@@ -27,13 +25,22 @@ public class FirstServlet extends HttpServlet {
         out.println("</head>");
         out.println("<body>");
         out.println("<h1>" + Constants.DATABASE_FILE_PATH + "</h1>");
-        out.println("</body>");
-        out.println("</html>");
+
 
         //CODE
         Account acc = new Account("test", "test");
-        AccountsBook book = new AccountsBook();
-        book.addAccount(acc);
-        Storage.SaveChangesToStorage(book);
+        Storage.addAccount(acc);
+        Account acc2 = Storage.getAccount("test");
+        out.println("<h3>"+acc.getUsername()+"</h3>");
+        out.println("<h3>"+acc.getPassword()+"</h3>");
+        out.println("<h3>"+acc.getSalt()+"</h3>");
+        out.println("<h3>"+acc.getRole().toString()+"</h3>");
+        out.println("<h3>"+acc.isLoggedIn()+"</h3>");
+        out.println("<h3>"+acc.isLocked()+"</h3>");
+
+        //HTML
+        out.println("</body>");
+        out.println("</html>");
+
     }
 }
