@@ -7,8 +7,6 @@ import javax.servlet.http.HttpServletResponse;
 
 
 public class Authenticator {
-
-
     static void create_account(String name, String pwd1, String pwd2) {
         if (!pwd1.equals(pwd2))
             return;
@@ -43,7 +41,7 @@ public class Authenticator {
     static void logout(Account acc) {
         return;
     }
-    
+
     static Account get_account(String name) {
         return null;
     }

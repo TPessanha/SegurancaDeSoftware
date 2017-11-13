@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fb658dd2-edc6-409d-831c-486bcc615e72" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Util/Authenticator.java" afterPath="$PROJECT_DIR$/src/Util/Authenticator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Util/Storage.java" afterPath="$PROJECT_DIR$/src/Util/Storage.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,14 +52,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Authenticator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Authenticator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Util/Authenticator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+            <state relative-caret-position="323">
+              <caret line="26" column="47" lean-forward="true" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
               <folding>
-                <element signature="e#1029#1030#0" expanded="true" />
-                <element signature="e#1051#1052#0" expanded="true" />
+                <element signature="e#1027#1028#0" expanded="true" />
+                <element signature="e#1049#1050#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,16 +75,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Storage.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Storage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Util/Storage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state relative-caret-position="476">
+              <caret line="143" column="0" lean-forward="true" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
               <folding>
                 <element signature="method#getAllAccounts#0;class#Storage#0" expanded="false" />
+                <element signature="method#checkUser#0;class#Storage#0" expanded="false" />
+                <element signature="method#getAccount#0;class#Storage#0" expanded="false" />
                 <element signature="method#addAccount#0;class#Storage#0" expanded="false" />
-                <marker date="1510547065871" expanded="true" signature="1696:1735" ph="select * fro... Accounts" />
-                <marker date="1510547065871" expanded="true" signature="3053:3093" ph="insert into Accounts... " />
+                <element signature="method#removeAccount#0;class#Storage#0" expanded="false" />
+                <element signature="e#4277#4278#0" expanded="true" />
+                <element signature="e#4325#4326#0" expanded="true" />
+                <marker date="1510548783221" expanded="true" signature="1794:1833" ph="select * fro... Accounts" />
+                <marker date="1510548783221" expanded="true" signature="3151:3191" ph="insert into Accounts... " />
+                <marker date="1510548783221" expanded="true" signature="3801:3840" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -222,12 +229,12 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/Servlets/FirstServlet.java" />
         <option value="$PROJECT_DIR$/src/Resources/Account.java" />
-        <option value="$PROJECT_DIR$/src/Util/Storage.java" />
         <option value="$PROJECT_DIR$/src/Servlets/Authenticator.java" />
         <option value="$PROJECT_DIR$/src/Exceptions/UndefinedAccount.java" />
         <option value="$PROJECT_DIR$/src/Exceptions/LockedAccount.java" />
         <option value="$PROJECT_DIR$/src/Exceptions/AuthenticationError.java" />
         <option value="$PROJECT_DIR$/src/Util/Authenticator.java" />
+        <option value="$PROJECT_DIR$/src/Util/Storage.java" />
       </list>
     </option>
   </component>
@@ -976,7 +983,7 @@
       <workItem from="1510541927655" duration="580000" />
       <workItem from="1510542748961" duration="87000" />
       <workItem from="1510543124912" duration="5000" />
-      <workItem from="1510543148717" duration="4894000" />
+      <workItem from="1510543148717" duration="5754000" />
     </task>
     <task id="LOCAL-00001" summary="Commit src">
       <created>1510509785579</created>
@@ -1010,7 +1017,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44114000" />
+    <option name="totallyTimeSpent" value="44974000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1022,7 +1029,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1080,13 +1087,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Util/Storage.java</url>
-          <line>67</line>
+          <line>70</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Util/Storage.java</url>
-          <line>91</line>
+          <line>94</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
@@ -1501,26 +1508,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Util/Storage.java">
+    <entry file="file://$PROJECT_DIR$/src/Util/Authenticator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        <state relative-caret-position="323">
+          <caret line="26" column="47" lean-forward="true" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
           <folding>
-            <element signature="method#getAllAccounts#0;class#Storage#0" expanded="false" />
-            <element signature="method#addAccount#0;class#Storage#0" expanded="false" />
-            <marker date="1510547065871" expanded="true" signature="1696:1735" ph="select * fro... Accounts" />
-            <marker date="1510547065871" expanded="true" signature="3053:3093" ph="insert into Accounts... " />
+            <element signature="e#1027#1028#0" expanded="true" />
+            <element signature="e#1049#1050#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Util/Authenticator.java">
+    <entry file="file://$PROJECT_DIR$/src/Util/Storage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+        <state relative-caret-position="476">
+          <caret line="143" column="0" lean-forward="true" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
           <folding>
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1051#1052#0" expanded="true" />
+            <element signature="method#getAllAccounts#0;class#Storage#0" expanded="false" />
+            <element signature="method#checkUser#0;class#Storage#0" expanded="false" />
+            <element signature="method#getAccount#0;class#Storage#0" expanded="false" />
+            <element signature="method#addAccount#0;class#Storage#0" expanded="false" />
+            <element signature="method#removeAccount#0;class#Storage#0" expanded="false" />
+            <element signature="e#4277#4278#0" expanded="true" />
+            <element signature="e#4325#4326#0" expanded="true" />
+            <marker date="1510548783221" expanded="true" signature="1794:1833" ph="select * fro... Accounts" />
+            <marker date="1510548783221" expanded="true" signature="3151:3191" ph="insert into Accounts... " />
+            <marker date="1510548783221" expanded="true" signature="3801:3840" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
