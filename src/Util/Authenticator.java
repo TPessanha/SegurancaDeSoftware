@@ -22,8 +22,11 @@ public class Authenticator {
         return;
     }
 
-    static void change_pwd(String name, String pwd1, String pwd2) {
-        return;
+    public static void change_pwd(String name, String pwd1, String pwd2) throws PasswordMismatch {
+    	
+		if(pwd1.equals(pwd2))
+			Storage.getAccount(name).setPassword(pwd1);
+		else throw new PasswordMismatch("Passwords do not match");
     }
 
     public static Account login(String name, String pwd) throws UndefinedAccount, LockedAccount, AuthenticationError {
