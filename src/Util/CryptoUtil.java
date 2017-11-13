@@ -4,14 +4,11 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 import java.security.Key;
 
-/**
- * Created by tomas on 12/11/2017.
- */
 public class CryptoUtil {
     private static final String ALGO = "AES";
     private static final byte[] keyValue = new byte[]{'F', 'C', 'T', '/', 'U', 'N', 'L', 'r',
             'o', 'c', 'k', 's', '!', '!', 'd', 'i'};
-    static Key key = new SecretKeySpec(keyValue, ALGO);
+    private static final Key key = new SecretKeySpec(keyValue, ALGO);
 
     /**
      * Encrypts a String value

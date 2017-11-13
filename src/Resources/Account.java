@@ -6,11 +6,11 @@ import java.security.SecureRandom;
 import java.util.Base64;
 
 public class Account {
-    private String username;
+    private final String username;
     private String password;
     private boolean loggedIn;
     private boolean locked;
-    private role role;
+    private Role role;
     private String salt;
 
     /**
@@ -30,7 +30,7 @@ public class Account {
         }
         this.loggedIn = false;
         this.locked = true;
-        this.role = role.USER;
+        this.role = Role.USER;
     }
 
     public Account(String username, String password, String salt, String role, String locked, String loggedIn) {
@@ -42,19 +42,11 @@ public class Account {
             System.err.println(e.getMessage());
             return;
         }
-        if (loggedIn.equals("true"))
-            this.loggedIn = true;
-        else
-            this.loggedIn = false;
+        this.loggedIn = loggedIn.equals("true");
 
-        if (locked.equals("true"))
-            this.locked = true;
-        else
-            this.locked = false;
-        if (role.equals("ADMIN"))
-            this.role = this.role.ADMIN;
-        else
-            this.role = this.role.USER;
+        this.locked = locked.equals("true");
+
+        this.role = Role.fromValue(role);
     }
 
     /**
@@ -98,7 +90,7 @@ public class Account {
      *
      * @return The role of the account
      */
-    public Account.role getRole() {
+    public Role getRole() {
         return role;
     }
 
@@ -107,7 +99,7 @@ public class Account {
      *
      * @param role An enum of Account.role
      */
-    public void setRole(Account.role role) {
+    public void setRole(Role role) {
         this.role = role;
     }
 
@@ -148,12 +140,6 @@ public class Account {
         byte bytes[] = new byte[32];
         random.nextBytes(bytes);
         Base64.Encoder encoder = Base64.getUrlEncoder().withoutPadding();
-        String salt = encoder.encodeToString(bytes);
-        return salt;
+        return encoder.encodeToString(bytes);
     }
-
-    public enum role {
-        ADMIN, USER
-    }
-
 }
