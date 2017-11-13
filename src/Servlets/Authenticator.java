@@ -25,22 +25,17 @@ public class Authenticator extends HttpServlet{
 		PrintWriter out = resp.getWriter();
 		Account root = new Account("root", "root");
 		accountsBook.addAccount(root);
-		out.print("Root username = " + root.getUsername() + " " + "Password = " + root.getPassword());
 		out.println("<br><br>");
 		if(req.getParameter("loginButton") != null) {
 			resp.setContentType("text/html");
 			try {
-				out.println("Entered try block <br>");
 				String name = req.getParameter("name");
-				out.println("Got name " + name + " <br>");
 				String password = req.getParameter("password");
-				out.println("Got password " + password + " <br>");
 				HttpSession session = req.getSession(true);
-				out.println("Got session <br>");
 				Account authUser = login(name, password, out);
-				out.println("Logged in <br>");
 				//TODO session.setAttribute(JWT, authUser.getJWT());
-				//TODO Page MainMenu does not exist yet resp.sendRedirect("MainPage");
+				//TODO Page MainMenu does not exist yet 
+				resp.sendRedirect("MainMenu");
 			} catch (AuthenticationErrorException e) {
 				out.println("Authentication error!");
 				out.println("<br>");
@@ -104,25 +99,16 @@ public class Authenticator extends HttpServlet{
 
 	private Account login(String name, String pwd, PrintWriter out) throws UndefinedAccountException, LockedAccountException, AuthenticationErrorException {
 		Account account = accountsBook.getAccount(name);
-		out.println("<br> does userName exist?");
 		if(account == null)
 			throw new UndefinedAccountException();
-		out.println("<br> yes. ");
 		//TODO boolean isLocked = account.isLocked();
 		boolean isLocked = false;
-		out.println("<br> is userName Locked?");
 		if(isLocked)
 			throw new LockedAccountException();
-		out.println("<br> no.");
 		//TODO check how to hash password
-		out.println("<br> is password correct?");
 		if(!account.checkPassword(pwd)) {
-			out.println("<br> Saved account: " + account.getPassword());
-			out.println("<br> Logged Aaccount: " + pwd);
-			out.println("<br> Pw compare result: " + account.checkPassword(pwd));
 			throw new AuthenticationErrorException();
 		}
-		out.println("<br> yes.");
 		//TODO Set logged with: account.setLoggedIn()
 		return account;
 	}
