@@ -53,6 +53,11 @@ public class Authenticator extends HttpServlet{
 				out.println("Account not found!!");
 				out.println("<br>");
 				out.println("<a href='MainPage'>MainPage</a>");
+			} catch (Exception e) {
+				out.println("Undefined Exception <br> ");
+				e.printStackTrace(out);
+				out.println("<br>");
+				out.println("<a href='MainPage'>MainPage</a>");
 			}
 		}
 	};
@@ -99,11 +104,10 @@ public class Authenticator extends HttpServlet{
 
 	private Account login(String name, String pwd, PrintWriter out) throws UndefinedAccountException, LockedAccountException, AuthenticationErrorException {
 		Account account = accountsBook.getAccount(name);
-		out.print("<br> Acount = " + account.getUsername() + " + trying " + name + "<br>");
 		out.println("<br> does userName exist?");
-		if(account.getUsername().equals(""))
+		if(account == null)
 			throw new UndefinedAccountException();
-		out.println("<br> yes.");
+		out.println("<br> yes. ");
 		//TODO boolean isLocked = account.isLocked();
 		boolean isLocked = false;
 		out.println("<br> is userName Locked?");
