@@ -31,6 +31,8 @@ public class Account {
         this.loggedIn = false;
         this.locked = true;
         this.role = Role.USER;
+        this.locked = false;
+        this.role = role.USER;
     }
 
     public Account(String username, String password, String salt, String role, String locked, String loggedIn) {
@@ -119,15 +121,6 @@ public class Account {
             this.password = CryptoUtil.encrypt(password + this.salt);
         } catch (Exception e) {
             System.err.println(e.getMessage());
-        }
-    }
-
-    public boolean checkPassword(String password) {
-        try {
-            return password.equals(CryptoUtil.encrypt(password + this.salt));
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-            return false;
         }
     }
 

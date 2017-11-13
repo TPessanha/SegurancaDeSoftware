@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb658dd2-edc6-409d-831c-486bcc615e72" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Seguranca/Servlets/FirstServlet.class" afterPath="$PROJECT_DIR$/out/production/Seguranca/Servlets/FirstServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Resources/Account.java" afterPath="$PROJECT_DIR$/src/Resources/Account.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Servlets/FirstServlet.java" afterPath="$PROJECT_DIR$/src/Servlets/FirstServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Servlets/Authenticator.java" afterPath="$PROJECT_DIR$/src/Servlets/Authenticator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Servlets/ChangePassword.java" afterPath="$PROJECT_DIR$/src/Servlets/ChangePassword.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Servlets/CreateAccount.java" afterPath="$PROJECT_DIR$/src/Servlets/CreateAccount.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Servlets/DeleteAccount.java" afterPath="$PROJECT_DIR$/src/Servlets/DeleteAccount.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Servlets/Logout.java" afterPath="$PROJECT_DIR$/src/Servlets/Logout.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Servlets/MainMenu.java" afterPath="$PROJECT_DIR$/src/Servlets/MainMenu.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,7 +94,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.Accounts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.Accounts" pinned="false" current-in-tab="false">
         <entry file="dbDummy://dbtable:/aaadc93a/e8684959-dae7-499b-a9ec-e4c97ba882b6/main.Accounts">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -150,12 +154,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Account.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Account.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Resources/Account.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="55" column="7" lean-forward="false" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
-              <folding />
+            <state relative-caret-position="257">
+              <caret line="124" column="5" lean-forward="false" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
+              <folding>
+                <element signature="e#1591#1592#0" expanded="true" />
+                <element signature="e#1622#1623#0" expanded="true" />
+                <element signature="e#1804#1805#0" expanded="true" />
+                <element signature="e#1844#1845#0" expanded="true" />
+                <element signature="e#1987#1988#0" expanded="true" />
+                <element signature="e#2016#2017#0" expanded="true" />
+                <element signature="e#2187#2188#0" expanded="true" />
+                <element signature="e#2223#2224#0" expanded="true" />
+                <element signature="e#2343#2344#0" expanded="true" />
+                <element signature="e#2370#2371#0" expanded="true" />
+                <element signature="e#2503#2504#0" expanded="true" />
+                <element signature="e#2535#2536#0" expanded="true" />
+                <element signature="e#2570#2571#0" expanded="true" />
+                <element signature="e#2601#2602#0" expanded="true" />
+                <element signature="e#2636#2637#0" expanded="true" />
+                <element signature="e#2667#2668#0" expanded="true" />
+                <marker date="1510546408692" expanded="false" signature="2963:2974" ph=" { " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -244,8 +266,8 @@
         <option value="$PROJECT_DIR$/src/Util/dbUtil/dbConnection.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/Resources/Account.java" />
         <option value="$PROJECT_DIR$/src/Servlets/FirstServlet.java" />
+        <option value="$PROJECT_DIR$/src/Resources/Account.java" />
       </list>
     </option>
   </component>
@@ -411,6 +433,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Servlets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Seguranca" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Seguranca" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -958,7 +998,7 @@
       <workItem from="1510541927655" duration="580000" />
       <workItem from="1510542748961" duration="87000" />
       <workItem from="1510543124912" duration="5000" />
-      <workItem from="1510543148717" duration="3042000" />
+      <workItem from="1510543148717" duration="3279000" />
     </task>
     <task id="LOCAL-00001" summary="Commit src">
       <created>1510509785579</created>
@@ -992,7 +1032,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42262000" />
+    <option name="totallyTimeSpent" value="42499000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1452,27 +1492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Util/Storage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="115" column="31" lean-forward="false" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
-          <folding>
-            <element signature="method#getAllAccounts#0;class#Storage#0" expanded="false" />
-            <element signature="method#SaveChangesToStorage#0;class#Storage#0" expanded="false" />
-            <marker date="1510540013971" expanded="true" signature="1755:1794" ph="select * fro... Accounts" />
-            <marker date="1510540013971" expanded="true" signature="3112:3152" ph="insert into Accounts... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Resources/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="55" column="7" lean-forward="false" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Servlets/FirstServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
@@ -1491,6 +1510,45 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Util/Storage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="115" column="31" lean-forward="false" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
+          <folding>
+            <element signature="method#getAllAccounts#0;class#Storage#0" expanded="false" />
+            <element signature="method#SaveChangesToStorage#0;class#Storage#0" expanded="false" />
+            <marker date="1510540013971" expanded="true" signature="1755:1794" ph="select * fro... Accounts" />
+            <marker date="1510540013971" expanded="true" signature="3112:3152" ph="insert into Accounts... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Resources/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="124" column="5" lean-forward="false" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
+          <folding>
+            <element signature="e#1591#1592#0" expanded="true" />
+            <element signature="e#1622#1623#0" expanded="true" />
+            <element signature="e#1804#1805#0" expanded="true" />
+            <element signature="e#1844#1845#0" expanded="true" />
+            <element signature="e#1987#1988#0" expanded="true" />
+            <element signature="e#2016#2017#0" expanded="true" />
+            <element signature="e#2187#2188#0" expanded="true" />
+            <element signature="e#2223#2224#0" expanded="true" />
+            <element signature="e#2343#2344#0" expanded="true" />
+            <element signature="e#2370#2371#0" expanded="true" />
+            <element signature="e#2503#2504#0" expanded="true" />
+            <element signature="e#2535#2536#0" expanded="true" />
+            <element signature="e#2570#2571#0" expanded="true" />
+            <element signature="e#2601#2602#0" expanded="true" />
+            <element signature="e#2636#2637#0" expanded="true" />
+            <element signature="e#2667#2668#0" expanded="true" />
+            <marker date="1510546408692" expanded="false" signature="2963:2974" ph=" { " />
+          </folding>
         </state>
       </provider>
     </entry>
