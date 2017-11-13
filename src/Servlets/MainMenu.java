@@ -16,8 +16,10 @@ public class MainMenu extends HttpServlet{
 
 		PrintWriter out = resp.getWriter();
 		out.println("<center>");
-		out.println("<h1>Main Page</h1>");
+		out.println("<h1>Main Menu</h1>");
 		out.println("<br>");
+		if(req.getParameter("Message") != null)
+			out.println(req.getParameter("Message"));
 		out.println("<br>");
 
 		//Create Account button

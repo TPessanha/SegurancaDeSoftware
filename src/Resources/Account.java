@@ -16,7 +16,7 @@ public class Account {
         this.username = username;
         this.password = password;
         this.loggedIn = false;
-        this.locked = true;
+        this.locked = false;
         this.role = role.USER;
     }
   
@@ -62,7 +62,7 @@ public class Account {
 
     public boolean checkPassword(String password) {
         try {
-            return password.equals(CryptoUtil.encrypt(password));
+            return this.password.equals(CryptoUtil.encrypt(password));
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
