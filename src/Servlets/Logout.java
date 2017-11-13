@@ -9,6 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import Resources.Account;
 import Util.Authenticator;
@@ -27,6 +28,12 @@ public class Logout extends HttpServlet{
         	Account acc = Authenticator.login(request, response);
         	Authenticator.logout(acc);
         	LOG.fine("User logout (" + acc.getUsername() + ")");
+        	
+        	// TODO Is this it for session logout?
+        	HttpSession session = request.getSession(false);
+        	session.setAttribute("USER", null);
+        	session.setAttribute("PASS", null);
+        	
             RequestDispatcher rs = request.getRequestDispatcher("login.html");
             rs.forward(request, response);
         } catch (Exception e) {
