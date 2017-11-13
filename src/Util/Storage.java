@@ -4,10 +4,13 @@ package Util;
 import Resources.Account;
 import Util.dbUtil.dbConnection;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
@@ -115,6 +118,30 @@ public class Storage {
             System.err.println(e.getMessage());
         }
 
+    }
+
+    public static void updateAccount() {
+
+    }
+
+    public static void removeAccount(String user) {
+        String sql = "DELETE FROM Accounts WHERE Username = ?";
+
+        try (Connection conn = dbConnection.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            // set the corresponding param
+            ps.setString(1, user);
+            // execute the delete statement
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+    }
+
+    public static void removeAccount(Account acc) {
+        removeAccount(acc.getUsername());
     }
 
 }
