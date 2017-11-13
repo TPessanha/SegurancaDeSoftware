@@ -32,7 +32,7 @@ public class Authenticator extends HttpServlet{
 				String name = req.getParameter("name");
 				String password = req.getParameter("password");
 				HttpSession session = req.getSession(true);
-				Account authUser = login(name, password, out);
+				Account authUser = login(name, password);
 				//TODO session.setAttribute(JWT, authUser.getJWT());
 				//TODO Page MainMenu does not exist yet 
 				resp.sendRedirect("MainMenu");
@@ -97,7 +97,7 @@ public class Authenticator extends HttpServlet{
 	}
 
 
-	private Account login(String name, String pwd, PrintWriter out) throws UndefinedAccountException, LockedAccountException, AuthenticationErrorException {
+	private Account login(String name, String pwd) throws UndefinedAccountException, LockedAccountException, AuthenticationErrorException {
 		Account account = accountsBook.getAccount(name);
 		if(account == null)
 			throw new UndefinedAccountException();
