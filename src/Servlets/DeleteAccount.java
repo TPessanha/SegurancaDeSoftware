@@ -2,7 +2,6 @@ package Servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
 import java.util.logging.Logger;
 
 import javax.servlet.RequestDispatcher;
@@ -26,13 +25,6 @@ public class DeleteAccount extends HttpServlet{
         
         String user = request.getParameter("user");
 
-        Connection conn;
-        try {
-        	conn = Util.dbUtil.dbConnection.getConnection();
-        } catch (Exception e) {
-			out.print(e.getMessage());
-		}
-        
         try {
 			Account acc = Authenticator.login(request, response);
 			Authenticator.delete_account(user);
