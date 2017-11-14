@@ -94,5 +94,4 @@
         <servlet-name>Logout</servlet-name>
         <url-pattern>/Logout</url-pattern>
     </servlet-mapping>
-    >>>>>>> refs/remotes/origin/master
 </web-app>
