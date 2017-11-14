@@ -110,25 +110,28 @@ public class Storage {
         }
     }
 
-    public static void removeAccount(String user) {
+    public static int removeAccount(String user) {
         String sql = "DELETE FROM Accounts WHERE Username = ?";
-
+        int nAffectedRows = 0;
         try (Connection conn = dbConnection.getConnection();
              PreparedStatement ps = conn.prepareStatement(sql)) {
 
             // set the corresponding param
             ps.setString(1, user);
             // execute the delete statement
-            ps.executeUpdate();
+            nAffectedRows = ps.executeUpdate();
             ps.close();
 
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         }
+        finally {
+            return nAffectedRows;
+        }
     }
 
-    public static void removeAccount(Account acc) {
-        removeAccount(acc.getUsername());
+    public static int removeAccount(Account acc) {
+        return removeAccount(acc.getUsername());
     }
 
 }

@@ -16,18 +16,15 @@
 
 <h1>Hello <%= session.getAttribute(Constants.USER_COOKIE) %>
 </h1>
-<h2><%= session.getAttribute(Constants.ROLE_COOKIE) %>
+<h2>Role: <%= session.getAttribute(Constants.ROLE_COOKIE) %>
 </h2>
 
 <%
-    if (session.getAttribute(Constants.ROLE_COOKIE) == null) {
-        String redirectURL = "login.html";
-        response.sendRedirect(redirectURL);
-    }
     if (session.getAttribute(Constants.ROLE_COOKIE).equals("ADMIN")) {
-        out.print("<a href = \"deleteAcc.html\" > Delete a user</a >");
+        out.print("<a href = \"deleteAcc.jsp\" > Delete a user</a >");
     }
 %>
+<a href="changePass.jsp">Change password</a>
 <a href="Logout">Logout</a>
 </body>
 </html>

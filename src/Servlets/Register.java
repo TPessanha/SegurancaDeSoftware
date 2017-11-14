@@ -19,22 +19,12 @@ public class Register extends HttpServlet {
         String pass1 = request.getParameter("pass1");
         String pass2 = request.getParameter("pass2");
 
-
-        //creating connection with the database
-        Connection conn;
-        try {
-            conn = Util.dbUtil.dbConnection.getConnection();
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
-
         try {
             Util.Authenticator.create_account(name, pass1, pass2);
             out.println("Account created");
-            RequestDispatcher rs = request.getRequestDispatcher("register.html");
-            rs.include(request, response);
         } catch (Exception e) {
             out.println(e.getMessage());
+        } finally {
             RequestDispatcher rs = request.getRequestDispatcher("register.html");
             rs.include(request, response);
         }

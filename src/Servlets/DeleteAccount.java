@@ -31,12 +31,12 @@ public class DeleteAccount extends HttpServlet {
                 LOG.fine("User " + user + " deleted by" + acc.getUsername());
 
                 out.println("Account (" + user + ") was deleted");
-                RequestDispatcher rs = request.getRequestDispatcher("deleteAcc.html");
-                rs.include(request, response);
             }
-
         } catch (Exception e) {
             out.print(e.getMessage());
+        } finally {
+            RequestDispatcher rs = request.getRequestDispatcher("deleteAcc.jsp");
+            rs.include(request, response);
         }
     }
 }

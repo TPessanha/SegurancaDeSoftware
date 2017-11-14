@@ -18,8 +18,10 @@ public class Authenticator {
         Storage.addAccount(acc);
     }
 
-    public static void delete_account(String name) {
-        Storage.removeAccount(name);
+    public static void delete_account(String name) throws UndefinedAccountException {
+        int i = Storage.removeAccount(name);
+        if (i==0)
+            throw new UndefinedAccountException("No account was found");
     }
 
 

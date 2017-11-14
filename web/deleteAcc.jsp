@@ -1,3 +1,10 @@
+<%@ page import="Util.Constants" %>
+<%
+if (session.getAttribute(Constants.USER_COOKIE) == null) {
+String redirectURL = "login.html";
+response.sendRedirect(redirectURL);
+}
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
