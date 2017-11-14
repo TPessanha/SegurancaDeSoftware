@@ -57,9 +57,7 @@ public class Authenticator {
     }
 
     public static void logout(Account acc) throws UndefinedAccount {
-        Account acc = Storage.getAccount(name);
-        if (acc == null)
-            throw new UndefinedAccount("No account was found");
+        Storage.getAccount(acc.getUsername());
         acc.setLoggedIn(false);
         Storage.updateAccount(acc);
     }

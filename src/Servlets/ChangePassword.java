@@ -32,9 +32,8 @@ public class ChangePassword extends HttpServlet{
         	Account acc = Authenticator.login(request, response);
         	Authenticator.change_pwd(user, pass1, pass2);
         	LOG.fine("Changed password of " + user + " by command of " + acc.getUsername());
-        	
-            RequestDispatcher rs = request.getRequestDispatcher("welcome.html");
-            rs.forward(request, response);
+
+            response.sendRedirect("welcome.jsp");
             
         }catch (Exception e) {
         	out.println(e.getMessage());

@@ -37,12 +37,7 @@ public class Account {
     public Account(String username, String password, String salt, String role, String locked, String loggedIn) {
         this.username = username;
         this.salt = salt;
-        try {
-            this.password = CryptoUtil.encrypt(password + salt);
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-            return;
-        }
+        this.password = password;
         this.loggedIn = loggedIn.equals("true");
         this.locked = locked.equals("true");
         this.role = Role.fromValue(role);

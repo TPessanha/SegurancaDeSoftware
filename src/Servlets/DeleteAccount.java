@@ -29,9 +29,8 @@ public class DeleteAccount extends HttpServlet{
 			Account acc = Authenticator.login(request, response);
 			Authenticator.delete_account(user);
             LOG.fine("User " + user + " deleted by" + acc.getUsername());
-            
-            RequestDispatcher rs = request.getRequestDispatcher("welcome.html");
-            rs.forward(request, response);
+            response.sendRedirect("welcome.jsp");
+
 		} catch (Exception e) {
 			out.print(e.getMessage());
 		}

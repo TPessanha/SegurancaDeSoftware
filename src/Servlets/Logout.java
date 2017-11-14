@@ -6,20 +6,18 @@ import java.util.logging.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 
 import Resources.Account;
 import Util.Authenticator;
+import Util.Constants;
 import Util.Storage;
 
 public class Logout extends HttpServlet{
 	
     private static final Logger LOG = Logger.getLogger(Storage.class.getName());
 	
-	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
@@ -31,16 +29,15 @@ public class Logout extends HttpServlet{
         	
         	// TODO Is this it for session logout?
         	HttpSession session = request.getSession(false);
-        	session.setAttribute("USER", null);
+        	/*session.setAttribute("USER", null);
         	session.setAttribute("PASS", null);
             session.setAttribute("SALT", null);
             session.setAttribute("ROLE", null);
             session.setAttribute("LOGGED_IN", null);
-            session.setAttribute("LOCKED", null);
+            session.setAttribute("LOCKED", null);*/
         	session.invalidate();
-        	
-            RequestDispatcher rs = request.getRequestDispatcher("login.html");
-            rs.forward(request, response);
+
+            response.sendRedirect("login.html");
         } catch (Exception e) {
             out.println(e.getMessage());
 		}
