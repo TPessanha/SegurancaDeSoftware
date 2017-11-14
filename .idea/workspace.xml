@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb658dd2-edc6-409d-831c-486bcc615e72" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/changePass.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/deleteAcc.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/deleteAcc.html" afterPath="$PROJECT_DIR$/web/deleteAcc.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Database.db" afterPath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Database.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Servlets/Register.class" afterPath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/WEB-INF/classes/Servlets/Register.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Seguranca/Database.db" afterPath="$PROJECT_DIR$/out/production/Seguranca/Database.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Seguranca/Servlets/Register.class" afterPath="$PROJECT_DIR$/out/production/Seguranca/Servlets/Register.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Database.db" afterPath="$PROJECT_DIR$/src/Database.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/register.html" afterPath="$PROJECT_DIR$/out/artifacts/Seguranca_war_exploded/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Servlets/ChangePassword.java" afterPath="$PROJECT_DIR$/src/Servlets/ChangePassword.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Servlets/DeleteAccount.java" afterPath="$PROJECT_DIR$/src/Servlets/DeleteAccount.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Servlets/Register.java" afterPath="$PROJECT_DIR$/src/Servlets/Register.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Util/Authenticator.java" afterPath="$PROJECT_DIR$/src/Util/Authenticator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Util/Storage.java" afterPath="$PROJECT_DIR$/src/Util/Storage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/login.html" afterPath="$PROJECT_DIR$/web/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/register.html" afterPath="$PROJECT_DIR$/web/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/welcome.jsp" afterPath="$PROJECT_DIR$/web/welcome.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -131,8 +116,8 @@
       <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="28" />
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -168,7 +153,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Storage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Storage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Util/Storage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="192">
@@ -206,11 +191,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="12" selection-end-column="7" />
+            <state relative-caret-position="272">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -308,7 +293,6 @@
         <option value="$PROJECT_DIR$/src/Resources/Account.java" />
         <option value="$PROJECT_DIR$/src/Servlets/Login.java" />
         <option value="$PROJECT_DIR$/src/Servlets/Register.java" />
-        <option value="$PROJECT_DIR$/web/register.html" />
         <option value="$PROJECT_DIR$/web/deleteAcc.html" />
         <option value="$PROJECT_DIR$/src/Servlets/DeleteAccount.java" />
         <option value="$PROJECT_DIR$/src/Servlets/ChangePassword.java" />
@@ -316,6 +300,7 @@
         <option value="$PROJECT_DIR$/web/welcome.jsp" />
         <option value="$PROJECT_DIR$/src/Util/Authenticator.java" />
         <option value="$PROJECT_DIR$/src/Util/Storage.java" />
+        <option value="$PROJECT_DIR$/web/register.html" />
       </list>
     </option>
   </component>
@@ -1108,7 +1093,6 @@
       <workItem from="1510543148717" duration="5846000" />
       <workItem from="1510582793359" duration="18376000" />
       <workItem from="1510623235246" duration="691000" />
-      <workItem from="1510669981410" duration="15428000" />
     </task>
     <task id="LOCAL-00001" summary="Commit src">
       <created>1510509785579</created>
@@ -1142,7 +1126,6 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79561000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1530,22 +1513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="12" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -1620,6 +1587,22 @@
             <marker date="1510693303389" expanded="true" signature="2939:3033" ph="UPDATE Accou... " />
             <marker date="1510693303389" expanded="true" signature="3778:3817" ph="DELETE FROM " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
