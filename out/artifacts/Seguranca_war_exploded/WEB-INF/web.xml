@@ -8,14 +8,15 @@
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
-    <session-config>
+    <!--<session-config>
         <cookie-config>
             <http-only>true</http-only>
             <secure>true</secure>
-            <max-age>7200</max-age> <!-- 60 * 60 * 2-->
+            <max-age>7200</max-age>
         </cookie-config>
         <session-timeout>120</session-timeout>
-    </session-config>
+    </session-config>-->
+    <!-- 60 * 60 * 2-->
 
     <servlet>
         <servlet-name>FirstServlet</servlet-name>
@@ -53,14 +54,6 @@
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <servlet-name>Authenticator</servlet-name>
-        <servlet-class>Servlets.Authenticator</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Authenticator</servlet-name>
-        <url-pattern>/Authenticator</url-pattern>
-    </servlet-mapping>
     <servlet>
         <servlet-name>MainMenu</servlet-name>
         <servlet-class>Servlets.MainMenu</servlet-class>

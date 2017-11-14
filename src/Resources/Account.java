@@ -37,12 +37,7 @@ public class Account {
     public Account(String username, String password, String salt, String role, String locked, String loggedIn) {
         this.username = username;
         this.salt = salt;
-        try {
-            this.password = CryptoUtil.encrypt(password + salt);
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-            return;
-        }
+        this.password = password;
         this.loggedIn = loggedIn.equals("true");
         this.locked = locked.equals("true");
         this.role = Role.fromValue(role);
@@ -130,5 +125,20 @@ public class Account {
         random.nextBytes(bytes);
         Base64.Encoder encoder = Base64.getUrlEncoder().withoutPadding();
         return encoder.encodeToString(bytes);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Account account = (Account) o;
+
+        if (loggedIn != account.loggedIn) return false;
+        if (locked != account.locked) return false;
+        if (!username.equals(account.username)) return false;
+        if (!password.equals(account.password)) return false;
+        if (role != account.role) return false;
+        return salt.equals(account.salt);
     }
 }
