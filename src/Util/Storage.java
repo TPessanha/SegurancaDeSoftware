@@ -4,17 +4,11 @@ package Util;
 import Resources.Account;
 import Util.dbUtil.dbConnection;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.logging.Logger;
-
-import static Util.Constants.DATABASE_FILE_PATH;
 
 public class Storage {
     private static final Logger LOG = Logger.getLogger(Storage.class.getName());
@@ -37,6 +31,7 @@ public class Storage {
                 ResultSet rs = ps.executeQuery();
 
                 //Get user
+                String tmpTest = rs.getString("LoggedIn");
                 if (rs.next()) {
                     LOG.fine("User found");
                     Account acc = new Account(
@@ -44,8 +39,10 @@ public class Storage {
                             rs.getString("Password"),
                             rs.getString("Salt"),
                             rs.getString("Role"),
-                            rs.getString("Locked"),
-                            rs.getString("LoggedIn"));
+                            String.valueOf(rs.getBoolean("Locked")),
+                            String.valueOf(rs.getBoolean("LoggedIn")));
+
+                    ps.close();
                     return acc;
                 }
                 LOG.fine("User NOT found");
@@ -81,6 +78,7 @@ public class Storage {
                 ps.setBoolean(5, acc.isLoggedIn());
                 ps.setBoolean(6, acc.isLocked());
                 int i = ps.executeUpdate();
+                ps.close();
 
                 LOG.fine("Added (" + i + ") new accounts");
             }
@@ -105,7 +103,6 @@ public class Storage {
             ps.setString(6, acc.getUsername());
             // execute the update statement
             int i = ps.executeUpdate();
-            ps.executeUpdate();
             ps.close();
 
         } catch (SQLException e) {

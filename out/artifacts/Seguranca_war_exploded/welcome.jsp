@@ -25,7 +25,7 @@
         response.sendRedirect(redirectURL);
     }
     if (session.getAttribute(Constants.ROLE_COOKIE).equals("ADMIN")) {
-        out.print("<a href = \"Logout\" > Delete a user</a >");
+        out.print("<a href = \"deleteAcc.html\" > Delete a user</a >");
     }
 %>
 <a href="Logout">Logout</a>

@@ -26,15 +26,8 @@ public class Logout extends HttpServlet{
         	Account acc = Authenticator.login(request, response);
         	Authenticator.logout(acc);
         	LOG.fine("User logout (" + acc.getUsername() + ")");
-        	
-        	// TODO Is this it for session logout?
+
         	HttpSession session = request.getSession(false);
-        	/*session.setAttribute("USER", null);
-        	session.setAttribute("PASS", null);
-            session.setAttribute("SALT", null);
-            session.setAttribute("ROLE", null);
-            session.setAttribute("LOGGED_IN", null);
-            session.setAttribute("LOCKED", null);*/
         	session.invalidate();
 
             response.sendRedirect("login.html");

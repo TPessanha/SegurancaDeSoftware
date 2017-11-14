@@ -126,4 +126,19 @@ public class Account {
         Base64.Encoder encoder = Base64.getUrlEncoder().withoutPadding();
         return encoder.encodeToString(bytes);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Account account = (Account) o;
+
+        if (loggedIn != account.loggedIn) return false;
+        if (locked != account.locked) return false;
+        if (!username.equals(account.username)) return false;
+        if (!password.equals(account.password)) return false;
+        if (role != account.role) return false;
+        return salt.equals(account.salt);
+    }
 }

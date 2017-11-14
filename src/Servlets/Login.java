@@ -37,13 +37,6 @@ public class Login extends HttpServlet {
             session.setAttribute("LOGGED_IN", String.valueOf(acc.isLoggedIn()));
             session.setAttribute("LOCKED", String.valueOf(acc.isLocked()));
 
-
-          /*  //Add username cookie
-            Cookie loginCookie = new Cookie(Constants.USER_COOKIE,user);
-            //setting cookie to expiry in 2H
-            loginCookie.setMaxAge((int) Constants.EXPIRATION_TIME);
-            response.addCookie(loginCookie);*/
-
             response.sendRedirect("welcome.jsp");
 
         } catch (Exception e) {

@@ -9,9 +9,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 
-/**
- * Created by tomas on 13/11/2017.
- */
 public class Register extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -41,6 +38,5 @@ public class Register extends HttpServlet {
             RequestDispatcher rs = request.getRequestDispatcher("register.html");
             rs.include(request, response);
         }
-
     }
 }
