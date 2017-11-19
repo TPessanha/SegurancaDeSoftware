@@ -28,7 +28,7 @@ public class Authenticator {
 	private static void runStrengthTest(String pwd1) throws PasswordTooWeakException, PasswordDoesNotMeetRequirementsException {
 		Strength str = getPasswordStrength(pwd1);
 		if (str.getScore() < Constants.MIN_PASSWORD_SECURITY_SCORE) {
-			List<String> lines = new ArrayList<String>(10);
+			List<String> lines = new ArrayList<>(10);
 			
 			lines.add("Password is too weak, strength (" + str.getScore() + ") from 0-4.");
 			lines.add("Time to crack: " + str.getCrackTimesDisplay().getOfflineSlowHashing1e4perSecond());
@@ -63,20 +63,22 @@ public class Authenticator {
 		Account acc = get_account(name.toLowerCase());
 		if (acc.isLocked()) {
 			//TODO Check to see if its free again
-			List<Log> logs = Storage.getLastLoginsAttemps(acc.getUsername(), 20);
+			List<Log> logs = Storage.getLastLoinsAttempts(acc.getUsername(), 20);
 			int failedAttempts = 0;
+			assert logs != null;
 			for (Log l : logs) {
 				if (!l.isSuccess())
 					failedAttempts++;
 				else
 					break;
 			}
+			if (logs.size() == 0)
+				throw new LockedAccountException("This account is locked");
 			Log lastLogin = logs.get(0);
 			Date now = new Date();
-			Calendar cal = Calendar.getInstance(); // creates calendar
-			cal.setTime(lastLogin.getDateTime()); // sets calendar time/date
-			cal.add(Calendar.MINUTE, getDelay(failedAttempts)); // adds one hour
-			Date test = cal.getTime();
+			Calendar cal = Calendar.getInstance();
+			cal.setTime(lastLogin.getDateTime());
+			cal.add(Calendar.MINUTE, getDelay(failedAttempts));
 			
 			if (now.after(cal.getTime())) {
 				acc.setLocked(false);
@@ -84,8 +86,9 @@ public class Authenticator {
 			} else
 				throw new LockedAccountException();
 		} else {
-			List<Log> logs = Storage.getLastLoginsAttemps(acc.getUsername(), 20);
+			List<Log> logs = Storage.getLastLoinsAttempts(acc.getUsername(), 20);
 			int failedAttempts = 0;
+			assert logs != null;
 			for (Log l : logs) {
 				if (!l.isSuccess())
 					failedAttempts++;

@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.logging.Logger;
 
 import static Util.Constants.UNKNOWN_ERROR_MSG;
 
@@ -42,6 +41,7 @@ public class ChangePassword extends HttpServlet {
 			out.print("Password changed");
 		} catch (MyException e) {
 			out.print(e.getHtmlMsg());
+			assert acc != null;
 			Storage.logOperation(acc.getUsername(), Operation.CHANGE_PASSWORD, false, "Reason: " + e.getMessage());
 		} catch (Exception e) {
 			System.err.println(e.getMessage());

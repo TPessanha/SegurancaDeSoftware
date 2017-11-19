@@ -1,6 +1,5 @@
 package Servlets;
 
-import Exceptions.LockedAccountException;
 import Exceptions.MyException;
 import Resources.Account;
 import Resources.Operation;
@@ -15,7 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.logging.Logger;
 
 import static Util.Constants.UNKNOWN_ERROR_MSG;
 

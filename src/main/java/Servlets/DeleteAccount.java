@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.logging.Logger;
 
 import static Util.Constants.UNKNOWN_ERROR_MSG;
 
@@ -36,6 +35,7 @@ public class DeleteAccount extends HttpServlet {
 			}
 		} catch (MyException e) {
 			out.print(e.getHtmlMsg());
+			assert acc != null;
 			Storage.logOperation(acc.getUsername(), Operation.DELETE_ACCOUNT, false, "Tried to delete account: " + user);
 			
 		} catch (Exception e) {

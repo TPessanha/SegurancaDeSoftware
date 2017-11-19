@@ -154,8 +154,8 @@ public class Storage {
 		}
 	}
 	
-	public static List<Log> getLastLoginsAttemps(String username, int numberOfAttemps) {
-		List<Log> logs = new ArrayList<Log>(10);
+	static List<Log> getLastLoinsAttempts(String username, int numberOfAttemps) {
+		List<Log> logs = new ArrayList<>(10);
 		try {
 			Connection connection = dbConnection.getConnection();
 			
@@ -183,7 +183,7 @@ public class Storage {
 		return null;
 	}
 	
-	public static Log getLastLoginAttemp(String username) {
+	/*public static Log getLastLoginAttemp(String username) {
 		try {
 			Connection connection = dbConnection.getConnection();
 			
@@ -201,6 +201,7 @@ public class Storage {
 						rs.getBoolean("Success"),
 						rs.getString("Notes")
 				);
+				ps.close();
 				return log;
 			}
 			ps.close();
@@ -209,7 +210,7 @@ public class Storage {
 			System.err.println(e.getMessage());
 		}
 		return null;
-	}
+	}*/
 	
 	private static Date getDateTime(String timestamp) {
 		SimpleDateFormat dateFormat = new SimpleDateFormat(

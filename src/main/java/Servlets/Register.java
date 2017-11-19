@@ -38,6 +38,7 @@ public class Register extends HttpServlet {
 			}
 		} catch (MyException e) {
 			out.println(e.getHtmlMsg());
+			assert acc != null;
 			Storage.logOperation(acc.getUsername(), Operation.REGISTER_USER, false, e.getMessage());
 		} catch (Exception e) {
 			System.err.println(e.getMessage());

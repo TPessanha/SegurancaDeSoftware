@@ -132,6 +132,7 @@ public class Account {
         if (locked != account.locked) return false;
         if (!username.equals(account.username)) return false;
         if (!password.equals(account.password)) return false;
+        //noinspection SimplifiableIfStatement
         if (role != account.role) return false;
         return salt.equals(account.salt);
     }

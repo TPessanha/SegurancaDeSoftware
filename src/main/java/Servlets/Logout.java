@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.logging.Logger;
 
 public class Logout extends HttpServlet {
 	
@@ -34,6 +33,7 @@ public class Logout extends HttpServlet {
 			Storage.logOperation(acc.getUsername(), Operation.LOGOUT, true);
 		} catch (MyException e) {
 			out.println(e.getHtmlMsg());
+			assert acc != null;
 			Storage.logOperation(acc.getUsername(), Operation.LOGOUT, false, "Reason: " + e.getMessage());
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
