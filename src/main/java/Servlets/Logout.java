@@ -19,8 +19,6 @@ import java.util.logging.Logger;
 
 public class Logout extends HttpServlet {
 	
-	private static final Logger LOG = Logger.getLogger(Storage.class.getName());
-	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		response.setContentType("text/html;charset=UTF-8");
@@ -29,7 +27,6 @@ public class Logout extends HttpServlet {
 		try {
 			acc = Authenticator.login(request, response);
 			Authenticator.logout(acc);
-			LOG.fine("User logout (" + acc.getUsername() + ")");
 			
 			HttpSession session = request.getSession(false);
 			session.invalidate();

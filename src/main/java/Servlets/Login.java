@@ -20,7 +20,6 @@ import java.util.logging.Logger;
 import static Util.Constants.UNKNOWN_ERROR_MSG;
 
 public class Login extends HttpServlet {
-	private static final Logger LOG = Logger.getLogger(Storage.class.getName());
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");

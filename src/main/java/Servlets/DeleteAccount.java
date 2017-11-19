@@ -19,9 +19,6 @@ import java.util.logging.Logger;
 import static Util.Constants.UNKNOWN_ERROR_MSG;
 
 public class DeleteAccount extends HttpServlet {
-	
-	private static final Logger LOG = Logger.getLogger(DeleteAccount.class.getName());
-	
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		response.setContentType("text/html;charset=UTF-8");
@@ -34,7 +31,6 @@ public class DeleteAccount extends HttpServlet {
 			if (acc.getRole().equals(Role.ADMIN)) {
 				Authenticator.delete_account(user);
 				
-				LOG.fine("User " + user + " deleted by" + acc.getUsername());
 				out.println("Account (" + user + ") was deleted");
 				Storage.logOperation(acc.getUsername(), Operation.DELETE_ACCOUNT, true, "Deleted account: " + user);
 			}

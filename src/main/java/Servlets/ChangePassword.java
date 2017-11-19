@@ -21,8 +21,6 @@ import static Util.Constants.UNKNOWN_ERROR_MSG;
 
 public class ChangePassword extends HttpServlet {
 	
-	private static final Logger LOG = Logger.getLogger(Storage.class.getName());
-	
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		response.setContentType("text/html;charset=UTF-8");
@@ -40,7 +38,6 @@ public class ChangePassword extends HttpServlet {
 			session.setAttribute("PASS", accUpdated.getPassword());
 			session.setAttribute("SALT", accUpdated.getSalt());
 			
-			LOG.fine("Changed password of " + user);
 			Storage.logOperation(acc.getUsername(), Operation.CHANGE_PASSWORD, true);
 			out.print("Password changed");
 		} catch (MyException e) {
