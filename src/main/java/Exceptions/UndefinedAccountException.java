@@ -5,7 +5,7 @@ public class UndefinedAccountException extends MyException {
         super(msg);
     }
     public UndefinedAccountException() {
-        super("No account was found","<p>Invalid userID or password</p>");
+        super("No account was found","Invalid userID or password");
     }
     public UndefinedAccountException(String msg, String htmlMsg) {
         super(msg, htmlMsg);

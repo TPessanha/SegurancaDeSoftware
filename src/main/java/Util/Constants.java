@@ -13,10 +13,10 @@ public class Constants {
 	public final static int SALT_STRENGHT = 14;
 	
 	//Maximum delayed for repeated logins
-	public final static int MAX_LOGIN_DELAY = 30; //Minutos
 	public final static int LVL1_LOGIN_DELAY = 1; //Minutos
 	public final static int LVL2_LOGIN_DELAY = 3; //Minutos
 	public final static int LVL3_LOGIN_DELAY = 10; //Minutos
+	public final static int MAX_LOGIN_DELAY = 30; //Minutos
 	
 	//Messages
 	public final static String UNKNOWN_ERROR_MSG = "Unknown error";

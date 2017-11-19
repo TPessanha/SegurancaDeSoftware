@@ -31,7 +31,6 @@ public class Login extends HttpServlet {
 		HttpSession session;
 		try {
 			Account acc = Authenticator.login(user, pass);
-			LOG.fine("User login (" + acc.getUsername() + ")");
 			session = request.getSession(false);
 			if (session != null) {
 				String prevAcc = (String) session.getAttribute("USER");
