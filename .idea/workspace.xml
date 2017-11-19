@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99cae9dc-cd33-4d8b-9e8f-48a4dfe81df6" name="Default" comment="more cleaning">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/Database.db" afterPath="$PROJECT_DIR$/src/main/resources/Database.db" />
+    <list default="true" id="99cae9dc-cd33-4d8b-9e8f-48a4dfe81df6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Resources/Account.java" afterPath="$PROJECT_DIR$/src/main/java/Resources/Account.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Resources/Log.java" afterPath="$PROJECT_DIR$/src/main/java/Resources/Log.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Servlets/ChangePassword.java" afterPath="$PROJECT_DIR$/src/main/java/Servlets/ChangePassword.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Servlets/DeleteAccount.java" afterPath="$PROJECT_DIR$/src/main/java/Servlets/DeleteAccount.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Servlets/Login.java" afterPath="$PROJECT_DIR$/src/main/java/Servlets/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Servlets/Logout.java" afterPath="$PROJECT_DIR$/src/main/java/Servlets/Logout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Servlets/Register.java" afterPath="$PROJECT_DIR$/src/main/java/Servlets/Register.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Util/Authenticator.java" afterPath="$PROJECT_DIR$/src/main/java/Util/Authenticator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Util/Storage.java" afterPath="$PROJECT_DIR$/src/main/java/Util/Storage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/changePass.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/changePass.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/deleteAcc.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/deleteAcc.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/login.html" afterPath="$PROJECT_DIR$/src/main/webapp/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" />
+    </list>
+    <list id="b6946b6c-926d-4848-9c8a-112d3e18378e" name="Database" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/Database.db" afterPath="$PROJECT_DIR$/src/main/resources/Database.db" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -96,86 +93,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Register.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Servlets/Register.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="41" column="37" lean-forward="false" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Account.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Resources/Account.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="134" column="8" lean-forward="false" selection-start-line="134" selection-start-column="8" selection-end-line="134" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1406#1407#0" expanded="false" />
-                <element signature="e#1437#1438#0" expanded="false" />
-                <element signature="e#1618#1619#0" expanded="false" />
-                <element signature="e#1658#1659#0" expanded="false" />
-                <element signature="e#1801#1802#0" expanded="false" />
-                <element signature="e#1830#1831#0" expanded="false" />
-                <element signature="e#2001#2002#0" expanded="false" />
-                <element signature="e#2037#2038#0" expanded="false" />
-                <element signature="e#2157#2158#0" expanded="false" />
-                <element signature="e#2184#2185#0" expanded="false" />
-                <element signature="e#2317#2318#0" expanded="false" />
-                <element signature="e#2349#2350#0" expanded="false" />
-                <element signature="e#2384#2385#0" expanded="false" />
-                <element signature="e#2415#2416#0" expanded="false" />
-                <element signature="e#2450#2451#0" expanded="false" />
-                <element signature="e#2481#2482#0" expanded="false" />
-                <element signature="method#setPassword#0;class#Account#0" expanded="false" />
-                <element signature="e#2780#2781#0" expanded="false" />
-                <element signature="e#2807#2808#0" expanded="false" />
-                <element signature="e#2844#2845#0" expanded="false" />
-                <element signature="e#2900#2901#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LockedAccountException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Exceptions/LockedAccountException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-              <folding>
-                <element signature="e#387#388#0" expanded="false" />
-                <element signature="e#422#423#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Authenticator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Util/Authenticator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="85" column="18" lean-forward="false" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.Accounts" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/ab0b5e4c/7fc1d44b-d625-477b-8c63-01c87f583378/main.Accounts">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="503">
+              <caret line="96" column="13" lean-forward="false" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -196,30 +118,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Storage.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Util/Storage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="94" column="23" lean-forward="false" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
-              <folding>
-                <element signature="method#updateAccount#0;class#Storage#0" expanded="false" />
-                <element signature="method#removeAccount#0;class#Storage#0" expanded="false" />
-                <element signature="method#logOperation#1;class#Storage#0" expanded="false" />
-                <marker date="1511135336360" expanded="true" signature="686:725" ph="select * fro... Accounts" />
-                <marker date="1511135336360" expanded="true" signature="1466:1506" ph="insert into Accounts... " />
-                <marker date="1511135336360" expanded="true" signature="1938:2032" ph="UPDATE Accou... " />
-                <marker date="1511135336360" expanded="true" signature="2629:2668" ph="DELETE FROM " />
-                <marker date="1511135336360" expanded="true" signature="3399:3462" ph="insert into Log... " />
-                <marker date="1511135336360" expanded="true" signature="3929:4000" ph="insert into Log... " />
-                <marker date="1511135336360" expanded="true" signature="4520:4599" ph="select * fro... Log" />
-              </folding>
+      <file leaf-file-name="main.Accounts" pinned="false" current-in-tab="true">
+        <entry file="dbDummy://dbtable:/ab0b5e4c/7fc1d44b-d625-477b-8c63-01c87f583378/main.Accounts">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sqldialects.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/sqldialects.xml">
-          <provider selected="true" editor-type-id="text-editor">
+          <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
@@ -227,15 +133,65 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Exceptions/MyException.java">
+      <file leaf-file-name="CryptoUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Util/CryptoUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+            <state relative-caret-position="458">
+              <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
               <folding>
-                <element signature="e#632#633#0" expanded="false" />
-                <element signature="e#653#654#0" expanded="false" />
+                <element signature="e#879#880#0" expanded="true" />
+                <element signature="e#919#920#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Util/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="changePass.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/changePass.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="5" lean-forward="false" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deleteAcc.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/deleteAcc.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/register.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -243,17 +199,11 @@
       <file leaf-file-name="Log.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Resources/Log.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="32" column="18" lean-forward="false" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+            <state relative-caret-position="407">
+              <caret line="31" column="24" lean-forward="false" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
               <folding>
-                <element signature="e#510#511#0" expanded="false" />
-                <element signature="e#536#537#0" expanded="false" />
-                <element signature="e#567#568#0" expanded="false" />
-                <element signature="e#589#590#0" expanded="false" />
-                <element signature="e#626#627#0" expanded="false" />
-                <element signature="e#649#650#0" expanded="false" />
-                <element signature="e#732#733#0" expanded="false" />
-                <element signature="e#751#752#0" expanded="false" />
+                <element signature="e#681#682#0" expanded="true" />
+                <element signature="e#702#703#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -292,9 +242,6 @@
       <list>
         <option value="$PROJECT_DIR$/SegurancaMaven.iml" />
         <option value="$PROJECT_DIR$/src/main/java/Servlets/ServletTEst.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/register.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/deleteAcc.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/changePass.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/Util/CryptoUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/Util/dbUtil/dbConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/Resources/Operation.java" />
@@ -303,7 +250,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Exceptions/PasswordDoesNotMeetRequirementsException.java" />
         <option value="$PROJECT_DIR$/src/main/java/Exceptions/PasswordMismatchException.java" />
         <option value="$PROJECT_DIR$/src/main/java/Exceptions/UsernameInUseException.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/welcome.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -319,8 +265,12 @@
         <option value="$PROJECT_DIR$/src/main/java/Servlets/Register.java" />
         <option value="$PROJECT_DIR$/src/main/java/Resources/Account.java" />
         <option value="$PROJECT_DIR$/src/main/java/Resources/Log.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Util/Authenticator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Util/Storage.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/changePass.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/deleteAcc.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/Util/Authenticator.java" />
       </list>
     </option>
   </component>
@@ -1087,6 +1037,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="99cae9dc-cd33-4d8b-9e8f-48a4dfe81df6" name="Default" comment="" />
+      <changelist id="b6946b6c-926d-4848-9c8a-112d3e18378e" name="Database" comment="" />
       <created>1511045220097</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -1099,7 +1050,7 @@
       <workItem from="1511116165350" duration="1867000" />
       <workItem from="1511118054457" duration="1152000" />
       <workItem from="1511119364749" duration="9733000" />
-      <workItem from="1511133837438" duration="1512000" />
+      <workItem from="1511133837438" duration="1937000" />
     </task>
     <task id="LOCAL-00001" summary="removed loggers">
       <created>1511134000846</created>
@@ -1115,11 +1066,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511134090122</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="more cleaning">
+      <created>1511135364688</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1511135364688</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35025000" />
+    <option name="totallyTimeSpent" value="35450000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1316,19 +1274,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/CryptoUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding>
-            <element signature="e#168#169#0" expanded="false" />
-            <element signature="e#211#212#0" expanded="false" />
-            <element signature="e#879#880#0" expanded="false" />
-            <element signature="e#919#920#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Util/dbUtil/dbConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1357,42 +1302,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/deleteAcc.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/changePass.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1488,14 +1401,6 @@
             <element signature="e#334#335#0" expanded="false" />
             <element signature="e#360#361#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1598,23 +1503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Resources/Log.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="32" column="18" lean-forward="false" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-          <folding>
-            <element signature="e#510#511#0" expanded="false" />
-            <element signature="e#536#537#0" expanded="false" />
-            <element signature="e#567#568#0" expanded="false" />
-            <element signature="e#589#590#0" expanded="false" />
-            <element signature="e#626#627#0" expanded="false" />
-            <element signature="e#649#650#0" expanded="false" />
-            <element signature="e#732#733#0" expanded="false" />
-            <element signature="e#751#752#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Exceptions/LockedAccountException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1626,10 +1514,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/sqldialects.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Storage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="131" column="31" lean-forward="true" selection-start-line="131" selection-start-column="31" selection-end-line="131" selection-end-column="31" />
+          <folding>
+            <element signature="method#updateAccount#0;class#Storage#0" expanded="false" />
+            <element signature="method#removeAccount#0;class#Storage#0" expanded="false" />
+            <element signature="method#logOperation#1;class#Storage#0" expanded="false" />
+            <marker date="1511135336360" expanded="true" signature="686:725" ph="select * fro... Accounts" />
+            <marker date="1511135336360" expanded="true" signature="1466:1506" ph="insert into Accounts... " />
+            <marker date="1511135336360" expanded="true" signature="1938:2032" ph="UPDATE Accou... " />
+            <marker date="1511135336360" expanded="true" signature="2629:2668" ph="DELETE FROM " />
+            <marker date="1511135336360" expanded="true" signature="3399:3462" ph="insert into Log... " />
+            <marker date="1511135336360" expanded="true" signature="3929:4000" ph="insert into Log... " />
+            <marker date="1511135336360" expanded="true" signature="4520:4599" ph="select * fro... Log" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Exceptions/MyException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
-          <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding>
             <element signature="e#632#633#0" expanded="false" />
             <element signature="e#653#654#0" expanded="false" />
@@ -1637,25 +1552,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Authenticator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/changePass.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="85" column="18" lean-forward="false" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
+        <state relative-caret-position="323">
+          <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/deleteAcc.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="5" lean-forward="false" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Resources/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="31" column="24" lean-forward="false" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/ab0b5e4c/7fc1d44b-d625-477b-8c63-01c87f583378/main.Accounts">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/CryptoUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+          <folding>
+            <element signature="e#879#880#0" expanded="true" />
+            <element signature="e#919#920#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Authenticator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="96" column="13" lean-forward="false" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1673,30 +1635,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/sqldialects.xml">
-      <provider selected="true" editor-type-id="text-editor">
+    <entry file="dbDummy://dbtable:/ab0b5e4c/7fc1d44b-d625-477b-8c63-01c87f583378/main.Accounts">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Storage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="94" column="23" lean-forward="false" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
-          <folding>
-            <element signature="method#updateAccount#0;class#Storage#0" expanded="false" />
-            <element signature="method#removeAccount#0;class#Storage#0" expanded="false" />
-            <element signature="method#logOperation#1;class#Storage#0" expanded="false" />
-            <marker date="1511135336360" expanded="true" signature="686:725" ph="select * fro... Accounts" />
-            <marker date="1511135336360" expanded="true" signature="1466:1506" ph="insert into Accounts... " />
-            <marker date="1511135336360" expanded="true" signature="1938:2032" ph="UPDATE Accou... " />
-            <marker date="1511135336360" expanded="true" signature="2629:2668" ph="DELETE FROM " />
-            <marker date="1511135336360" expanded="true" signature="3399:3462" ph="insert into Log... " />
-            <marker date="1511135336360" expanded="true" signature="3929:4000" ph="insert into Log... " />
-            <marker date="1511135336360" expanded="true" signature="4520:4599" ph="select * fro... Log" />
-          </folding>
         </state>
       </provider>
     </entry>

@@ -14,7 +14,10 @@ response.sendRedirect(redirectURL);
 <body>
 <h1>Delete Account</h1>
 <form method="post" action="DeleteAccount">
-    Username:<input type="text" name="user"/><br/>
+    <label>
+        Username:
+        <input type="text" name="user"/>
+    </label><br/>
     <input type="submit" value="Delete"/>
 </form>
 <a href="welcome.jsp">Back</a>

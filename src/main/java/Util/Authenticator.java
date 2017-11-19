@@ -67,10 +67,10 @@ public class Authenticator {
 			int failedAttempts = 0;
 			assert logs != null;
 			for (Log l : logs) {
-				if (!l.isSuccess())
-					failedAttempts++;
-				else
+				if (l.isSuccess())
 					break;
+				else
+					failedAttempts++;
 			}
 			if (logs.size() == 0)
 				throw new LockedAccountException("This account is locked");
@@ -90,10 +90,10 @@ public class Authenticator {
 			int failedAttempts = 0;
 			assert logs != null;
 			for (Log l : logs) {
-				if (!l.isSuccess())
-					failedAttempts++;
-				else
+				if (l.isSuccess())
 					break;
+				else
+					failedAttempts++;
 			}
 			if (failedAttempts > 5) {
 				acc.setLocked(true);

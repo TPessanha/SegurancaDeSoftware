@@ -13,8 +13,14 @@
 <body>
 <h1>Change Password</h1>
 <form method="post" action="ChangePassword">
-    Password:<input type="password" name="pass1"/><br/>
-    Repeated Password:<input type="password" name="pass2"/><br/>
+    <label>
+        Password:
+        <input type="password" name="pass1"/>
+    </label><br/>
+    <label>
+        Repeated Password:
+        <input type="password" name="pass2"/>
+    </label><br/>
     <input type="submit" value="Change Password"/>
 </form>
 <a href="welcome.jsp">Back</a>
