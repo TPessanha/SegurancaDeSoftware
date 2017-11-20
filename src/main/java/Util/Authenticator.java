@@ -158,10 +158,6 @@ public class Authenticator {
 	public static boolean checkPassword(String username, String password) throws UndefinedAccountException {
 		Account acc = get_account(username);
 		
-		if (CryptoUtil.doesPasswordMatch(password, acc.getPassword())) {
-			return true;
-		} else {
-			return false;
-		}
+		return CryptoUtil.doesPasswordMatch(password, acc.getPassword());
 	}
 }
