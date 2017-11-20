@@ -39,6 +39,7 @@ public class Storage {
 				ps.close();
 				return acc;
 			}
+			connection.close();
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
 		}
@@ -62,7 +63,7 @@ public class Storage {
 			ps.setBoolean(6, acc.isLocked());
 			int i = ps.executeUpdate();
 			ps.close();
-			
+			connection.close();
 			
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
@@ -73,8 +74,8 @@ public class Storage {
 	static void updateAccount(Account acc) {
 		String sql = "UPDATE Accounts SET Password = ?, Role = ?,Salt = ?,LoggedIn = ?,Locked = ? WHERE Username = ?";
 		try {
-			Connection conn = dbConnection.getConnection();
-			PreparedStatement ps = conn.prepareStatement(sql);
+			Connection connection = dbConnection.getConnection();
+			PreparedStatement ps = connection.prepareStatement(sql);
 			
 			// set the corresponding param
 			ps.setString(1, acc.getPassword());
@@ -86,6 +87,7 @@ public class Storage {
 			// execute the update statement
 			ps.executeUpdate();
 			ps.close();
+			connection.close();
 			
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
@@ -96,15 +98,15 @@ public class Storage {
 		String sql = "DELETE FROM Accounts WHERE Username = ?";
 		int nAffectedRows = 0;
 		try {
-			Connection conn = dbConnection.getConnection();
-			assert conn != null;
-			PreparedStatement ps = conn.prepareStatement(sql);
+			Connection connection = dbConnection.getConnection();
+			assert connection != null;
+			PreparedStatement ps = connection.prepareStatement(sql);
 			// set the corresponding param
 			ps.setString(1, user);
 			// execute the delete statement
 			nAffectedRows = ps.executeUpdate();
 			ps.close();
-			
+			connection.close();
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
 		}
@@ -127,6 +129,7 @@ public class Storage {
 			ps.setBoolean(3, success);
 			int i = ps.executeUpdate();
 			ps.close();
+			connection.close();
 			
 			
 		} catch (Exception e) {
@@ -176,6 +179,7 @@ public class Storage {
 				logs.add(log);
 			}
 			ps.close();
+			connection.close();
 			return logs;
 		} catch (Exception e) {
 			System.err.println(e.getMessage());

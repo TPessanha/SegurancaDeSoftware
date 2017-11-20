@@ -51,7 +51,7 @@ public class ChangePassword extends HttpServlet {
 		} catch (MyException e) {
 			out.print(e.getHtmlMsg());
 			assert acc != null;
-			Storage.logOperation(acc.getUsername(), Operation.CHANGE_PASSWORD, false, "Reason: " + e.getMessage());
+			Storage.logOperation(acc.getUsername(), Operation.CHANGE_PASSWORD, false, e.getMessage());
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
 			out.println(UNKNOWN_ERROR_MSG);

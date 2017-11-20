@@ -34,7 +34,7 @@ public class Logout extends HttpServlet {
 		} catch (MyException e) {
 			out.println(e.getHtmlMsg());
 			assert acc != null;
-			Storage.logOperation(acc.getUsername(), Operation.LOGOUT, false, "Reason: " + e.getMessage());
+			Storage.logOperation(acc.getUsername(), Operation.LOGOUT, false, e.getMessage());
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
 			out.println(Constants.UNKNOWN_ERROR_MSG);

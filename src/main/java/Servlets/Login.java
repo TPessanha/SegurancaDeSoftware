@@ -48,8 +48,8 @@ public class Login extends HttpServlet {
 			Storage.logOperation(user, Operation.LOGIN, true);
 			response.sendRedirect("welcome.jsp");
 			
-		}catch (MyException e) {
-			Storage.logOperation(user, Operation.LOGIN, false, "Reason: " + e.getMessage());
+		} catch (MyException e) {
+			Storage.logOperation(user, Operation.LOGIN, false, e.getMessage());
 			out.println(e.getHtmlMsg());
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
