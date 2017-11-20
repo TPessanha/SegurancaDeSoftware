@@ -18,6 +18,9 @@ public class Constants {
 	public final static int LVL3_LOGIN_DELAY = 10; //Minutos
 	public final static int MAX_LOGIN_DELAY = 30; //Minutos
 	
+	//O numero de vezes que o user pode introduzir a password errada antes de começar a fazer throttling
+	public final static int NUMBER_OF_ALLOWED_WRONG_PASSWORD = 3;
+	
 	//Messages
 	public final static String UNKNOWN_ERROR_MSG = "Unknown error";
 	

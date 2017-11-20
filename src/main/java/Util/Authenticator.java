@@ -13,6 +13,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import static Util.Constants.NUMBER_OF_ALLOWED_WRONG_PASSWORD;
+
 
 public class Authenticator {
 	public static void create_account(String name, String pwd1, String pwd2) throws PasswordMismatchException, UsernameInUseException, PasswordTooWeakException, PasswordDoesNotMeetRequirementsException {
@@ -95,7 +97,7 @@ public class Authenticator {
 				else
 					failedAttempts++;
 			}
-			if (failedAttempts > 5) {
+			if (failedAttempts > NUMBER_OF_ALLOWED_WRONG_PASSWORD) {
 				acc.setLocked(true);
 				Storage.updateAccount(acc);
 				throw new LockedAccountException();
