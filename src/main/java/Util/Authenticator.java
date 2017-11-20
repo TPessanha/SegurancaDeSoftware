@@ -152,4 +152,14 @@ public class Authenticator {
 		Zxcvbn passTester = new Zxcvbn();
 		return (passTester.measure(password));
 	}
+	
+	public static boolean checkPassword(String username, String password) throws UndefinedAccountException {
+		Account acc = get_account(username);
+		
+		if (CryptoUtil.doesPasswordMatch(password, acc.getPassword())) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

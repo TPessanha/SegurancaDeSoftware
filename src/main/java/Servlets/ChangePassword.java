@@ -27,18 +27,27 @@ public class ChangePassword extends HttpServlet {
 		HttpSession session = request.getSession(false);
 		
 		String user = (String) session.getAttribute(Constants.USER_COOKIE);
+		String pass0 = request.getParameter("pass0");
 		String pass1 = request.getParameter("pass1");
 		String pass2 = request.getParameter("pass2");
+		
 		Account acc = null;
 		try {
 			acc = Authenticator.login(request, response);
-			Authenticator.change_pwd(user, pass1, pass2);
-			Account accUpdated = Authenticator.get_account(user);
-			session.setAttribute("PASS", accUpdated.getPassword());
-			session.setAttribute("SALT", accUpdated.getSalt());
-			
-			Storage.logOperation(acc.getUsername(), Operation.CHANGE_PASSWORD, true);
-			out.print("Password changed");
+			if (Authenticator.checkPassword(acc.getUsername(), pass0)) {
+				Authenticator.change_pwd(user, pass1, pass2);
+				Account accUpdated = Authenticator.get_account(user);
+				session.setAttribute("PASS", accUpdated.getPassword());
+				session.setAttribute("SALT", accUpdated.getSalt());
+				
+				Storage.logOperation(acc.getUsername(), Operation.CHANGE_PASSWORD, true);
+				out.print("Password changed");
+			}
+			else
+			{
+				Storage.logOperation(acc.getUsername(), Operation.CHANGE_PASSWORD, false, "Incorrect current password");
+				out.print("The password you entered is incorrect");
+			}
 		} catch (MyException e) {
 			out.print(e.getHtmlMsg());
 			assert acc != null;

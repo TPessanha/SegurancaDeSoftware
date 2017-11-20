@@ -14,6 +14,10 @@
 <h1>Change Password</h1>
 <form method="post" action="ChangePassword">
     <label>
+        Current Password:
+        <input type="password" name="pass0"/>
+    </label><br/>
+    <label>
         Password:
         <input type="password" name="pass1"/>
     </label><br/>
