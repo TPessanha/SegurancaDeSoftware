@@ -1,8 +1,8 @@
 <%@ page import="Util.Constants" %>
 <%
-    if (session.getAttribute(Constants.USER_COOKIE) == null) {
-        String redirectURL = "login.html";
-        response.sendRedirect(redirectURL);
+    if (session == null || session.getAttribute(Constants.USER_COOKIE) == null) {%>
+<jsp:forward page="login.html"/>
+<%
     }
 %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>

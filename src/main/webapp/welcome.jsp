@@ -1,12 +1,15 @@
 <%@ page import="Util.Constants" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
-    if (session.getAttribute(Constants.USER_COOKIE) == null) {
-        String redirectURL = "login.html";
-        response.sendRedirect(redirectURL);
+    if (session == null || session.getAttribute("USER") == null) {
+%>
+<jsp:forward page="login.html"/>
+<%
+    } else {
+        request.setAttribute("Uname", session.getAttribute(Constants.USER_COOKIE));
+        request.setAttribute("Urole", session.getAttribute(Constants.ROLE_COOKIE));
     }
-    request.setAttribute("Uname", session.getAttribute(Constants.USER_COOKIE));
-    request.setAttribute("Urole", session.getAttribute(Constants.ROLE_COOKIE));
+
 
 %>
 <html lang="en">
@@ -21,7 +24,7 @@
 <h2>Role: <c:out value="${Urole}" escapeXml="true"/></h2>
 
 <%
-    if (session.getAttribute(Constants.ROLE_COOKIE).equals("ADMIN")) {
+    if (session != null && session.getAttribute(Constants.ROLE_COOKIE) != null && session.getAttribute(Constants.ROLE_COOKIE).equals("ADMIN")) {
         out.print("<a href = \"deleteAcc.jsp\" > Delete a user</a > | ");
         out.print("<a href = \"register.jsp\" > Register a user</a > | ");
     }

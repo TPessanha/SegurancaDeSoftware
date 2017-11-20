@@ -31,6 +31,7 @@ public class Logout extends HttpServlet {
 			session.invalidate();
 			
 			Storage.logOperation(acc.getUsername(), Operation.LOGOUT, true);
+			response.sendRedirect("login.html");
 		} catch (MyException e) {
 			out.println(e.getHtmlMsg());
 			assert acc != null;
@@ -39,6 +40,7 @@ public class Logout extends HttpServlet {
 			System.err.println(e.getMessage());
 			out.println(Constants.UNKNOWN_ERROR_MSG);
 		} finally {
+			
 			RequestDispatcher rs = request.getRequestDispatcher("login.html");
 			rs.include(request, response);
 		}
