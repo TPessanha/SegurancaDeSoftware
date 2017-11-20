@@ -8,8 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="99cae9dc-cd33-4d8b-9e8f-48a4dfe81df6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Util/Authenticator.java" afterPath="$PROJECT_DIR$/src/main/java/Util/Authenticator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Util/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/Util/Constants.java" />
     </list>
     <list id="3305a3e0-cace-4807-877c-9c645363b386" name="Datbase" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/Database.db" afterPath="$PROJECT_DIR$/src/main/resources/Database.db" />
@@ -948,7 +946,7 @@
       <workItem from="1511118054457" duration="1152000" />
       <workItem from="1511119364749" duration="9733000" />
       <workItem from="1511133837438" duration="2966000" />
-      <workItem from="1511137063858" duration="3297000" />
+      <workItem from="1511137063858" duration="3334000" />
     </task>
     <task id="LOCAL-00001" summary="removed loggers">
       <created>1511134000846</created>
@@ -1013,11 +1011,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511140574994</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added constant to change allowed wrong passwords">
+      <created>1511140790200</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1511140790200</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39776000" />
+    <option name="totallyTimeSpent" value="39813000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1081,7 +1086,8 @@
     <MESSAGE value="Added connection.close" />
     <MESSAGE value="Fixed not returning to login when no user is logged in" />
     <MESSAGE value="Added dogets, e mudei a pagina inicial" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added dogets, e mudei a pagina inicial" />
+    <MESSAGE value="Added constant to change allowed wrong passwords" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added constant to change allowed wrong passwords" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
