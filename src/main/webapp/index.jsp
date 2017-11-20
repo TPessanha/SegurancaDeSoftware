@@ -4,7 +4,7 @@
     <title>Hi there</title>
 </head>
 <body>
-Test do servlet<br>
+Demo do autenticador<br>
 <a href="login.html">Login</a>
 </body>
 </html>

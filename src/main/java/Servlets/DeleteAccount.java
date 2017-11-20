@@ -46,4 +46,10 @@ public class DeleteAccount extends HttpServlet {
 			rs.include(request, response);
 		}
 	}
+	
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
+		RequestDispatcher rs = request.getRequestDispatcher("deleteAcc.jsp");
+		rs.include(request, response);
+	}
 }

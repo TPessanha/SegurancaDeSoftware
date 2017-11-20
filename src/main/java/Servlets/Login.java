@@ -61,4 +61,10 @@ public class Login extends HttpServlet {
 		out.close();
 		
 	}
+	
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
+		RequestDispatcher rs = request.getRequestDispatcher("login.html");
+		rs.include(request, response);
+	}
 }

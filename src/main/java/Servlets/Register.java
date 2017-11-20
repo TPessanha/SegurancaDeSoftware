@@ -48,4 +48,10 @@ public class Register extends HttpServlet {
 			rs.include(request, response);
 		}
 	}
+	
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
+		RequestDispatcher rs = request.getRequestDispatcher("register.jsp");
+		rs.include(request, response);
+	}
 }

@@ -7,13 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99cae9dc-cd33-4d8b-9e8f-48a4dfe81df6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Servlets/Logout.java" afterPath="$PROJECT_DIR$/src/main/java/Servlets/Logout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/changePass.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/changePass.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/deleteAcc.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/deleteAcc.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/welcome.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/welcome.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Servlets/ChangePassword.java" afterPath="$PROJECT_DIR$/src/main/java/Servlets/ChangePassword.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Servlets/DeleteAccount.java" afterPath="$PROJECT_DIR$/src/main/java/Servlets/DeleteAccount.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Servlets/Login.java" afterPath="$PROJECT_DIR$/src/main/java/Servlets/Login.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Servlets/Register.java" afterPath="$PROJECT_DIR$/src/main/java/Servlets/Register.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
     </list>
     <list id="3305a3e0-cace-4807-877c-9c645363b386" name="Datbase" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/Database.db" afterPath="$PROJECT_DIR$/src/main/resources/Database.db" />
@@ -56,6 +55,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Authenticator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Util/Authenticator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="126" column="23" lean-forward="false" selection-start-line="126" selection-start-column="23" selection-end-line="126" selection-end-column="23" />
+              <folding>
+                <element signature="method#getDelay#0;class#Authenticator#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="welcome.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/welcome.jsp">
           <provider selected="true" editor-type-id="text-editor">
@@ -75,7 +86,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Accounts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Accounts" pinned="false" current-in-tab="false">
         <entry file="das://table:/ab0b5e4c/836b16d1-af17-461d-acc5-916c269ce8df/main.Accounts">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -87,38 +98,18 @@
       <file leaf-file-name="Logout.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Servlets/Logout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="221">
               <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Servlets/Login.java">
+      <file leaf-file-name="ChangePassword.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Servlets/ChangePassword.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="36" column="37" lean-forward="true" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/register.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="6" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="changePass.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/changePass.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+            <state relative-caret-position="500">
+              <caret line="65" column="75" lean-forward="false" selection-start-line="65" selection-start-column="75" selection-end-line="65" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -127,32 +118,41 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+            <state relative-caret-position="170">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deleteAcc.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/deleteAcc.jsp">
+      <file leaf-file-name="Register.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Servlets/Register.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+            <state relative-caret-position="486">
+              <caret line="53" column="73" lean-forward="false" selection-start-line="53" selection-start-column="73" selection-end-line="53" selection-end-column="73" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthenticationErrorException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Exceptions/AuthenticationErrorException.java">
+      <file leaf-file-name="DeleteAccount.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Servlets/DeleteAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+            <state relative-caret-position="153">
+              <caret line="51" column="74" lean-forward="false" selection-start-line="51" selection-start-column="74" selection-end-line="51" selection-end-column="74" />
               <folding>
-                <element signature="e#194#195#0" expanded="true" />
-                <element signature="e#232#233#0" expanded="true" />
+                <element signature="method#doPost#0;class#DeleteAccount#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Servlets/Login.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="64" column="4" lean-forward="false" selection-start-line="64" selection-start-column="4" selection-end-line="68" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -225,14 +225,10 @@
         <option value="$PROJECT_DIR$/src/main/java/Exceptions/LockedAccountException.java" />
         <option value="$PROJECT_DIR$/src/main/java/Util/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/Exceptions/UndefinedAccountException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Servlets/DeleteAccount.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Servlets/Register.java" />
         <option value="$PROJECT_DIR$/src/main/java/Resources/Account.java" />
         <option value="$PROJECT_DIR$/src/main/java/Resources/Log.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
         <option value="$PROJECT_DIR$/src/main/java/Util/Authenticator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Servlets/ChangePassword.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Servlets/Login.java" />
         <option value="$PROJECT_DIR$/src/main/java/Util/dbUtil/dbConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/Util/Storage.java" />
         <option value="$PROJECT_DIR$/src/main/java/Servlets/Logout.java" />
@@ -240,6 +236,11 @@
         <option value="$PROJECT_DIR$/src/main/webapp/register.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/deleteAcc.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/changePass.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/Servlets/Login.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Servlets/DeleteAccount.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Servlets/Register.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Servlets/ChangePassword.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
       </list>
     </option>
   </component>
@@ -956,7 +957,7 @@
       <workItem from="1511118054457" duration="1152000" />
       <workItem from="1511119364749" duration="9733000" />
       <workItem from="1511133837438" duration="2966000" />
-      <workItem from="1511137063858" duration="2518000" />
+      <workItem from="1511137063858" duration="3085000" />
     </task>
     <task id="LOCAL-00001" summary="removed loggers">
       <created>1511134000846</created>
@@ -1007,11 +1008,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511138640752</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed not returning to login when no user is logged in">
+      <created>1511140007389</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1511140007389</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38997000" />
+    <option name="totallyTimeSpent" value="39564000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1073,7 +1081,8 @@
     <MESSAGE value="Database reset" />
     <MESSAGE value="Added password check for changing password" />
     <MESSAGE value="Added connection.close" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added connection.close" />
+    <MESSAGE value="Fixed not returning to login when no user is logged in" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed not returning to login when no user is logged in" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1284,22 +1293,6 @@
     </entry>
     <entry file="dbDummy://dbtable:/5eebdc71/7fc1d44b-d625-477b-8c63-01c87f583378/main.Log" />
     <entry file="dbDummy://dbtable:/5eebdc71/7fc1d44b-d625-477b-8c63-01c87f583378/main.Accounts" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Servlets/DeleteAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="38" column="37" lean-forward="false" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Servlets/Register.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="41" column="37" lean-forward="false" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Resources/Account.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
@@ -1409,14 +1402,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Servlets/ChangePassword.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="53" column="86" lean-forward="true" selection-start-line="53" selection-start-column="86" selection-end-line="53" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/sql/DriverManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -1452,16 +1437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Authenticator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="126" column="23" lean-forward="false" selection-start-line="126" selection-start-column="23" selection-end-line="126" selection-end-column="23" />
-          <folding>
-            <element signature="method#getDelay#0;class#Authenticator#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1481,34 +1456,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Servlets/Logout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Servlets/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="36" column="37" lean-forward="true" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="6" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1548,6 +1499,66 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/Authenticator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="126" column="23" lean-forward="false" selection-start-line="126" selection-start-column="23" selection-end-line="126" selection-end-column="23" />
+          <folding>
+            <element signature="method#getDelay#0;class#Authenticator#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Servlets/DeleteAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="51" column="74" lean-forward="false" selection-start-line="51" selection-start-column="74" selection-end-line="51" selection-end-column="74" />
+          <folding>
+            <element signature="method#doPost#0;class#DeleteAccount#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Servlets/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="64" column="4" lean-forward="false" selection-start-line="64" selection-start-column="4" selection-end-line="68" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Servlets/Logout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Servlets/ChangePassword.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="65" column="75" lean-forward="false" selection-start-line="65" selection-start-column="75" selection-end-line="65" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Servlets/Register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="53" column="73" lean-forward="false" selection-start-line="53" selection-start-column="73" selection-end-line="53" selection-end-column="73" />
+          <folding />
         </state>
       </provider>
     </entry>

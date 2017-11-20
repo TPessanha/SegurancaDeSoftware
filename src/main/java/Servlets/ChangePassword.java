@@ -60,4 +60,10 @@ public class ChangePassword extends HttpServlet {
 			rs.include(request, response);
 		}
 	}
+	
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
+		RequestDispatcher rs = request.getRequestDispatcher("changePass.jsp");
+		rs.include(request, response);
+	}
 }
