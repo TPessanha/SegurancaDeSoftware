@@ -17,16 +17,23 @@ import static Util.Constants.NUMBER_OF_ALLOWED_WRONG_PASSWORD;
 
 
 public class Authenticator {
-	public static void create_account(String name, String pwd1, String pwd2) throws PasswordMismatchException, UsernameInUseException, PasswordTooWeakException, PasswordDoesNotMeetRequirementsException {
+	public static void create_account(String name, String pwd1, String pwd2) throws PasswordMismatchException, UsernameInUseException, PasswordTooWeakException, PasswordDoesNotMeetRequirementsException, UsernameDoesNotMeetRequirementsException {
 		if (!pwd1.equals(pwd2)) throw new PasswordMismatchException();
 		if (Storage.getAccount(name.toLowerCase()) != null) throw new UsernameInUseException();
-		
+
+		runUsernameCheck(name);
 		runStrengthTest(pwd1);
 		
 		Account acc = new Account(name.toLowerCase(), pwd1);
 		Storage.addAccount(acc);
 	}
-	
+
+	private static void runUsernameCheck(String username) throws UsernameDoesNotMeetRequirementsException {
+		if (username.equals(""))
+			throw new UsernameDoesNotMeetRequirementsException("Username does not meet requirements", "Username can´t be empty");
+		if (username.length() > 128)
+			throw new UsernameDoesNotMeetRequirementsException("Username does not meet requirements", "Username can´t be over 128 characters");
+	}
 	private static void runStrengthTest(String pwd1) throws PasswordTooWeakException, PasswordDoesNotMeetRequirementsException {
 		Strength str = getPasswordStrength(pwd1);
 		if (str.getScore() < Constants.MIN_PASSWORD_SECURITY_SCORE) {
