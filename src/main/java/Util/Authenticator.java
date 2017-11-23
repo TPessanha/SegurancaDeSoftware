@@ -30,10 +30,10 @@ public class Authenticator {
 
 	private static void runUsernameCheck(String username) throws UsernameDoesNotMeetRequirementsException {
 		if (username.equals(""))
-			throw new UsernameDoesNotMeetRequirementsException("Username does not meet requirements", "Username can´t be empty");
-		if (username.length() > 128)
-			throw new UsernameDoesNotMeetRequirementsException("Username does not meet requirements", "Username can´t be over 128 characters");
-	}
+            throw new UsernameDoesNotMeetRequirementsException("Username does not meet requirements", "Username can't be empty");
+        if (username.length() > 128)
+            throw new UsernameDoesNotMeetRequirementsException("Username does not meet requirements", "Username can't be over 128 characters");
+    }
 	private static void runStrengthTest(String pwd1) throws PasswordTooWeakException, PasswordDoesNotMeetRequirementsException {
 		Strength str = getPasswordStrength(pwd1);
 		if (str.getScore() < Constants.MIN_PASSWORD_SECURITY_SCORE) {
