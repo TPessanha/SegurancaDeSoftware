@@ -53,7 +53,7 @@ public class Authenticator {
 	}
 	
 	public static void delete_account(String name) throws UndefinedAccountException {
-		if (Storage.removeAccount(name.toLowerCase()) == 0) throw new UndefinedAccountException();
+		if (Storage.removeAccount(name.toLowerCase()) == 0) throw new UndefinedAccountException("No account was found","Invalid userID");
 	}
 	
 	public static void change_pwd(String name, String pwd1, String pwd2) throws UndefinedAccountException, PasswordMismatchException, PasswordTooWeakException, PasswordDoesNotMeetRequirementsException {
