@@ -10,7 +10,6 @@ public class Account {
     private boolean loggedIn;
     private boolean locked;
     private Role role;
-    private String salt;
 
     /**
      * Creates an account
@@ -20,22 +19,23 @@ public class Account {
      */
     public Account(String username, String password) {
         this.username = username;
-        this.salt = generateSalt();
         try {
-            this.password = CryptoUtil.bCryptEncrypt(password, this.salt);
+            this.password = CryptoUtil.bCryptEncrypt(password, generateSalt());
         } catch (Exception e) {
             System.err.println(e.getMessage());
             return;
         }
         this.loggedIn = false;
-        this.locked = true;
         this.role = Role.USER;
         this.locked = false;
     }
-
-    public Account(String username, String password, String salt, String role, String locked, String loggedIn) {
+    
+    private String generateSalt() {
+        return CryptoUtil.genSalt(SALT_STRENGHT);
+    }
+    
+    public Account(String username, String password, String role, String locked, String loggedIn) {
         this.username = username.toLowerCase();
-        this.salt = salt;
         this.password = password;
         this.loggedIn = loggedIn.equals("true");
         this.locked = locked.equals("true");
@@ -105,35 +105,24 @@ public class Account {
     }
 
     public void setPassword(String password) {
-        this.salt = generateSalt();
         try {
-            this.password = CryptoUtil.bCryptEncrypt(password,this.salt);
+            this.password = CryptoUtil.bCryptEncrypt(password, generateSalt());
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
     }
-
-    public String getSalt() {
-        return salt;
-    }
-
-    private String generateSalt() {
-        return CryptoUtil.genSalt(SALT_STRENGHT);
-    }
-
+    
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
+        
         Account account = (Account) o;
-
+        
         if (loggedIn != account.loggedIn) return false;
         if (locked != account.locked) return false;
         if (!username.equals(account.username)) return false;
-        if (!password.equals(account.password)) return false;
-        //noinspection SimplifiableIfStatement
-        if (role != account.role) return false;
-        return salt.equals(account.salt);
+        if (password != null ? !password.equals(account.password) : account.password != null) return false;
+        return role == account.role;
     }
 }

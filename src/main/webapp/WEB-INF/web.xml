@@ -10,14 +10,15 @@
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
-    <!--<session-config>
-       <cookie-config>
-           <http-only>true</http-only>
-           <secure>true</secure>
-           <max-age>7200</max-age>
-       </cookie-config>
-       <session-timeout>120</session-timeout>
-   </session-config>-->
+    <session-config>
+        <session-timeout>120</session-timeout>
+        <cookie-config>
+            <!--<http-only>true</http-only>
+            <secure>true</secure>-->
+            <max-age>7200</max-age>
+        </cookie-config>
+        <tracking-mode>COOKIE</tracking-mode>
+    </session-config>
     <!-- 60 * 60 * 2-->
 
     <servlet>
