@@ -38,7 +38,6 @@ public class ChangePassword extends HttpServlet {
 				Authenticator.change_pwd(user, pass1, pass2);
 				Account accUpdated = Authenticator.get_account(user);
 				session.setAttribute("PASS", accUpdated.getPassword());
-				session.setAttribute("SALT", accUpdated.getSalt());
 				
 				Storage.logOperation(acc.getUsername(), Operation.CHANGE_PASSWORD, true);
 				out.print("Password changed");

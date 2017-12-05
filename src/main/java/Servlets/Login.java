@@ -40,7 +40,6 @@ public class Login extends HttpServlet {
 			session = request.getSession();
 			session.setAttribute("USER", acc.getUsername());
 			session.setAttribute("PASS", acc.getPassword());
-			session.setAttribute("SALT", acc.getSalt());
 			session.setAttribute("ROLE", acc.getRole().toString());
 			session.setAttribute("LOGGED_IN", String.valueOf(acc.isLoggedIn()));
 			session.setAttribute("LOCKED", String.valueOf(acc.isLocked()));

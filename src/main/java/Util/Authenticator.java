@@ -148,7 +148,7 @@ public class Authenticator {
 	public static Account login(HttpServletRequest req, HttpServletResponse resp) throws AuthenticationErrorException {
 		Account acc;
 		try {
-			acc = new Account(req.getSession().getAttribute("USER").toString(), req.getSession().getAttribute("PASS").toString(), req.getSession().getAttribute("SALT").toString(), req.getSession().getAttribute("ROLE").toString(), req.getSession().getAttribute("LOCKED").toString(), req.getSession().getAttribute("LOGGED_IN").toString());
+			acc = new Account(req.getSession().getAttribute("USER").toString(), req.getSession().getAttribute("PASS").toString(), req.getSession().getAttribute("ROLE").toString(), req.getSession().getAttribute("LOCKED").toString(), req.getSession().getAttribute("LOGGED_IN").toString());
 			Account acc2 = get_account(acc.getUsername());
 			if (!acc.equals(acc2)) throw new AuthenticationErrorException();
 		} catch (Exception e) {

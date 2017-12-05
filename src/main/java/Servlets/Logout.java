@@ -29,6 +29,7 @@ public class Logout extends HttpServlet {
 			
 			HttpSession session = request.getSession(false);
 			session.invalidate();
+			request.getSession(true);
 			
 			Storage.logOperation(acc.getUsername(), Operation.LOGOUT, true);
 			response.sendRedirect("login.html");
