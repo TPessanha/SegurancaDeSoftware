@@ -1,9 +1,10 @@
 package Servlets;
 
 import Exceptions.MyException;
+import Resources.AccessOperation;
 import Resources.Account;
 import Resources.Operation;
-import Resources.Role;
+import Util.AccessControlCapabilities;
 import Util.Authenticator;
 import Util.Storage;
 
@@ -28,7 +29,7 @@ public class Register extends HttpServlet {
 		Account acc = null;
 		try {
 			acc = Authenticator.login(request, response);
-			if (acc.getRole().equals(Role.ADMIN)) {
+			if (AccessControlCapabilities.checkPermission(acc.getCapabilities(), "WebApp.Users", AccessOperation.CREATE)) {
 				Util.Authenticator.create_account(name, pass1, pass2);
 				out.println("Account created");
 				Storage.logOperation(acc.getUsername(), Operation.REGISTER_USER, true, "Created a new user: " + name);

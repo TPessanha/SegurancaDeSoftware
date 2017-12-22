@@ -2,6 +2,9 @@ package Resources;
 
 import Util.CryptoUtil;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static Util.Constants.SALT_STRENGHT;
 
 public class Account {
@@ -10,6 +13,7 @@ public class Account {
     private boolean loggedIn;
     private boolean locked;
     private Role role;
+    private List<String> capabilities;
 
     /**
      * Creates an account
@@ -28,6 +32,7 @@ public class Account {
         this.loggedIn = false;
         this.role = Role.USER;
         this.locked = false;
+        this.capabilities = new ArrayList<>();
     }
     
     private String generateSalt() {
@@ -40,6 +45,7 @@ public class Account {
         this.loggedIn = loggedIn.equals("true");
         this.locked = locked.equals("true");
         this.role = Role.fromValue(role);
+        this.capabilities = new ArrayList<>();
     }
 
     /**
@@ -111,7 +117,11 @@ public class Account {
             System.err.println(e.getMessage());
         }
     }
-    
+
+    public List<String> getCapabilities() {
+        return capabilities;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

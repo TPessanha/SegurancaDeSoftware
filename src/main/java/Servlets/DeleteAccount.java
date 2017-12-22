@@ -1,9 +1,10 @@
 package Servlets;
 
 import Exceptions.MyException;
+import Resources.AccessOperation;
 import Resources.Account;
 import Resources.Operation;
-import Resources.Role;
+import Util.AccessControlCapabilities;
 import Util.Authenticator;
 import Util.Storage;
 
@@ -27,11 +28,14 @@ public class DeleteAccount extends HttpServlet {
 		Account acc = null;
 		try {
 			acc = Authenticator.login(request, response);
-			if (acc.getRole().equals(Role.ADMIN)) {
+			if (AccessControlCapabilities.checkPermission(acc.getCapabilities(), "WebApp.Users", AccessOperation.DELETE)) {
 				Authenticator.delete_account(user);
 				
 				out.println("Account (" + user + ") was deleted");
 				Storage.logOperation(acc.getUsername(), Operation.DELETE_ACCOUNT, true, "Deleted account: " + user);
+			} else {
+				out.println("Permission denied");
+				Storage.logOperation(acc.getUsername(), Operation.DELETE_ACCOUNT, false, "Permission denied. Tried to delete account: " + user);
 			}
 		} catch (MyException e) {
 			out.print(e.getHtmlMsg());

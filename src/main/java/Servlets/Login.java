@@ -3,6 +3,7 @@ package Servlets;
 import Exceptions.MyException;
 import Resources.Account;
 import Resources.Operation;
+import Util.AccessControlCapabilities;
 import Util.Authenticator;
 import Util.Storage;
 
@@ -43,7 +44,8 @@ public class Login extends HttpServlet {
 			session.setAttribute("ROLE", acc.getRole().toString());
 			session.setAttribute("LOGGED_IN", String.valueOf(acc.isLoggedIn()));
 			session.setAttribute("LOCKED", String.valueOf(acc.isLocked()));
-			
+			AccessControlCapabilities.addCapabilities(session);
+
 			Storage.logOperation(user, Operation.LOGIN, true);
 			response.sendRedirect("welcome.jsp");
 			
