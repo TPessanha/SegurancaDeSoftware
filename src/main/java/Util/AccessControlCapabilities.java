@@ -48,6 +48,7 @@ public class AccessControlCapabilities {
         return token + "." + capability.getExpirationDate();
     }
 
+    //Use this one when u dont include the Account in the capability
     static public boolean checkPermission(List<String> capabilities, String Resource, AccessOperation Operation) throws Exception {
         Date now = new Date();
         Date expirationCapa;
@@ -75,6 +76,7 @@ public class AccessControlCapabilities {
         return auth;
     }
 
+    //Use this when u include the Account in the capability (wont be used o this job but its here)
     static public boolean checkPermission(Account account, String Resource, AccessOperation Operation) throws Exception {
         List<String> capabilities = account.getCapabilities();
         Date now = new Date();

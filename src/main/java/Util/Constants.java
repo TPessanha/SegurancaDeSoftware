@@ -7,7 +7,7 @@ public class Constants {
 	public final static Boolean USE_ABSOLUTE_PATH = false;
 
 	//Time for capability to expire
-	public final static long CAPABILITY_EXPIRE_TIME = 60 * 60 * 2; //2H
+	public final static long CAPABILITY_EXPIRE_TIME = 60 * 60 * 3; //3 Horas
 	
 	//Score minimo para uma password poder ser usada (0-4)
 	public final static int MIN_PASSWORD_SECURITY_SCORE = 4;
